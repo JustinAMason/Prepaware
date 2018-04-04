@@ -1,5 +1,3 @@
-The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
-
 # Prepaware
 
 ## Overview
@@ -91,18 +89,32 @@ An example Recipe with embedded grocery Items:
 
 (___TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed_)
 
-* (5 points) Integrate user authentication
-    * I'm going to be using passport for user authentication
-    * And account has been made for testing; I'll email you the password
-    * see <code>cs.nyu.edu/~jversoza/ait-final/register</code> for register page
-    * see <code>cs.nyu.edu/~jversoza/ait-final/login</code> for login page
-* (4 points) Perform client side form validation using a JavaScript library
-    * see <code>cs.nyu.edu/~jversoza/ait-final/my-form</code>
-    * if you put in a number that's greater than 5, an error message will appear in the dom
-* (5 points) vue.js
-    * used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
 
-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit_)
+* (3 points) Gulp
+	* Gulp is "an open-source JavaScript toolkit by Fractal Innovations" (wikipedia).
+	* The use of a toolkit will be beneficial towards the efficient creation of the web application.
+	* (Point value specified by rubric)
+
+* (2 points) ESLint
+	* ESLint is a "pluggable linting utility for JavaScript" (eslint.org).
+	* The use of ESLint will aid in development by helping maintain consistency in clear and concise code, which becomes more critical as the web applications increases in scale.
+	* A gulp-eslint plugin exists and is expected to be used.
+	* (Point value specified by rubric)
+
+* (2 points) Sass
+	* Sass is "the most mature, stable, and powerful professional grade CSS extension language in the world" (sass-lang.com).
+	* The use of Sass will aid in the styling of the webpages of Prepaware, as intuitive topics such as variable usage and nesting become available in creating stylesheets.
+	* A gulp-ruby-sass plugin exists and is expected to be used.
+	* (Point value specified by rubric)
+
+* (1 point) Auto-Incrementing
+	* Auto-incrementing is a concept that would ensure a unique identifier for every document in a collection (note: ObjectID already does that, but potentially asking the user to remember/re-type such a long string may not be feasible).
+	* Auto-incrementing would allow for the formation of a unique ID for every grocery item in the database, and can provide a solution for easy ingredient insertion when a user is creating a recipe.
+	* A mongoose-auto-increment plugin exists and is expected to be used.
+	* This module appears to be very straightforward and simple to apply; however, this will be a critical component of recipe creation and is thus vital to the project.
+
+
+8 points total out of 8 required points
 
 
 ## [Link to Initial Main Project File](app.js) 
