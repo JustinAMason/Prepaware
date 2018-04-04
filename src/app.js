@@ -44,6 +44,7 @@ app.get('/items/:slug', (req, res) => {
 
 // Create
 app.get('/create', (req, res) => {
+    res.render("create.hbs");
 });
 
 // Create a Recipe (send form)
@@ -69,10 +70,12 @@ app.post('/create/item', (req, res) => {
 
 // Creation Success
 app.get('/create/success', (req, res) => {
+    res.render("creation-notification.hbs");
 });
 
 // Creation Failure
 app.get('/create/failure', (req, res) => {
+    res.render("creation-notification.hbs");
 });
 
 app.listen(3000);
