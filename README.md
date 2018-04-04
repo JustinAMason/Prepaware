@@ -48,7 +48,6 @@ An example Recipe with embedded grocery Items:
 
 ```
 
-
 ## [Link to Commented First Draft Schema](db.js) 
 
 (___TODO__: create a first draft of your Schemas in db.js and link to it_)
@@ -87,9 +86,6 @@ An example Recipe with embedded grocery Items:
 
 ## Research Topics
 
-(___TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed_)
-
-
 * (3 points) Gulp
 	* Gulp is "an open-source JavaScript toolkit by Fractal Innovations" (wikipedia).
 	* The use of a toolkit will be beneficial towards the efficient creation of the web application.
@@ -122,8 +118,3 @@ An example Recipe with embedded grocery Items:
 (___TODO__: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js_)
 
 ## Annotations / References Used
-
-(___TODO__: list any tutorials/references/etc. that you've based your code off of_)
-
-1. [passport.js authentication docs](http://passportjs.org/docs) - (add link to source code that was based on this)
-2. [tutorial on vue.js](https://vuejs.org/v2/guide/) - (add link to source code that was based on this)
