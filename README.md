@@ -79,16 +79,13 @@ An example Recipe with embedded grocery Items:
 
 ![sitemap](documentation/sitemap.png)
 
-## User Stories or Use Cases
+## User Stories
 
-(___TODO__: write out how your application will be used through [user stories](http://en.wikipedia.org/wiki/User_story#Format) and / or [use cases](https://www.mongodb.com/download-center?jmp=docs&_ga=1.47552679.1838903181.1489282706#previous)_)
-
-1. as non-registered user, I can register a new account with the site
-2. as a user, I can log in to the site
-3. as a user, I can create a new grocery list
-4. as a user, I can view all of the grocery lists I've created in a single list
-5. as a user, I can add items to an existing grocery list
-6. as a user, I can cross off items in an existing grocery list
+1. As a viewer, I want a recipes page so that I can look at the list of recipes posted on the website.
+2. As a viewer, I want a grocery items page so that I can look at the list of ingredients posted on the website.
+3. As a creator, I want a grocery items page so that I can see what ingredients are available for creating recipes, and determine if I need to add any ingredients.
+4. As a creator, I want to be able to create a recipe and contribute to the community.
+5. As a creator, I want to be able to add an ingredient in case I want to create a recipe and the website doesn’t already have the ingredient.
 
 ## Research Topics
 
