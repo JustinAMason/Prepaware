@@ -52,8 +52,6 @@ An example Recipe with embedded grocery Items:
 
 ## Wireframes
 
-(___TODO__: wireframes for recipe/item submission forms)
-
 / - the homepage for Prepaware
 
 ![home](documentation/wireframes/home.png)
@@ -74,9 +72,13 @@ An example Recipe with embedded grocery Items:
 
 ![create_item](documentation/wireframes/create_grocery_item.png)
 
-/create/[recipe/item]/confirmation - page for notifying the user that the submitted recipe/item has been accepted and added
+/create/success - page for notifying the user that the submitted recipe/item has been accepted and added
 
 ![confirmation](documentation/wireframes/confirmation.png)
+
+/create/failure - page for notifying the user that the submitted recipe/item has been rejected
+
+![failure](documentation/wireframes/failure.png)
 
 ## Site map
 
