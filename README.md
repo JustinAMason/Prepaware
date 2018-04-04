@@ -14,8 +14,6 @@ The application will store grocery Items and Recipes.
 
 * Every recipe can contain multiple items (embedded; slightly modified)
 
-(___TODO__: sample documents_)
-
 An example grocery Item:
 
 ```javascript
@@ -40,8 +38,8 @@ An example Recipe with embedded grocery Items:
 	name: “Jerk Chicken”,
 	servings: 4,
 	ingredients: [
-	{ category: “meat”, brand: “Trader Joe’s”, name: “boneless skinless chicken breast”, weight: 908, price: 5.58, cals: 880, carbs: 0, fat: 0, protein: 176},
-	{ category: “canned/jarred goods”,  brand: “Grace’s”, name: “hot jerk marinade”, weight: 60, price: 1.32, cals: 0, carbs: 0, fat: 0, protein: 0}
+		{ category: “meat”, brand: “Trader Joe’s”, name: “boneless skinless chicken breast”, weight: 908, price: 5.58, cals: 880, carbs: 0, fat: 0, protein: 176},
+		{ category: “canned/jarred goods”,  brand: “Grace’s”, name: “hot jerk marinade”, weight: 60, price: 1.32, cals: 0, carbs: 0, fat: 0, protein: 0}
 	]
 	price: 6.90,
 	cals: 880,
