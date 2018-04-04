@@ -16,14 +16,21 @@ The application will store grocery Items and Recipes.
 
 (___TODO__: sample documents_)
 
-An Example User:
+An Example grocery Item:
 
 ```javascript
 {
-  username: "shannonshopper",
-  hash: // a password hash,
-  lists: // an array of references to List documents
+	category: “canned/jarred goods”,
+	brand: “Trader Joe’s”,
+	name: “Carolina BBQ Sauce”,
+	weight: 510, //g or mL
+	price: 2.69
+	cals: 900,
+	carbs: 210,
+	fat: 0,
+	protein: 0
 }
+
 ```
 
 An Example List with Embedded Items:
