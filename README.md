@@ -69,6 +69,10 @@ An example Recipe with embedded grocery Items:
 
 ![recipes_items](documentation/wireframes/view.png)
 
+/create - page for providing the user with an option to create a recipe or add an ingredient
+
+![create](documentation/wireframes/create.png)
+
 ## Site map
 
 (___TODO__: draw out a site map that shows how pages are related to each other_)
