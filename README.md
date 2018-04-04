@@ -73,6 +73,10 @@ An example Recipe with embedded grocery Items:
 
 ![create](documentation/wireframes/create.png)
 
+/create/[recipe/item]/confirmation - page for notifying the user that the submitted recipe/item has been accepted and added
+
+![confirmation](documentation/wireframes/confirmation.png)
+
 ## Site map
 
 (___TODO__: draw out a site map that shows how pages are related to each other_)
