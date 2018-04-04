@@ -113,7 +113,7 @@ An example Recipe with embedded grocery Items:
 8 points total out of 8 required points
 
 
-## [Link to Initial Main Project File](app.js) 
+## [Link to Initial Main Project File](src/app.js) 
 
 (___TODO__: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js_)
 
