@@ -10,12 +10,9 @@ Prepaware  is a web application that will allow users to add ingredients and the
 
 ## Data Model
 
-(___TODO__: a description of your application's data and their relationships to each other_) 
+The application will store grocery Items and Recipes.
 
-The application will store Users, Lists and Items
-
-* users can have multiple lists (via references)
-* each list can have multiple items (by embedding)
+* Every recipe can contain multiple items (embedded; slightly modified)
 
 (___TODO__: sample documents_)
 
