@@ -118,3 +118,7 @@ An example Recipe with embedded grocery Items:
 (___TODO__: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js_)
 
 ## Annotations / References Used
+
+1. [gulp-eslint plugin](https://www.npmjs.com/package/gulp-eslint)
+2. [gulp-ruby-sass plugin](https://www.npmjs.com/package/gulp-ruby-sass)
+3. [mongoose-auto-increment plugin](https://www.npmjs.com/package/mongoose-auto-increment)
