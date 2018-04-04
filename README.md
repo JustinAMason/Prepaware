@@ -66,6 +66,14 @@ An example Recipe with embedded grocery Items:
 
 ![create](documentation/wireframes/create.png)
 
+/create/recipe - page for providing the user with a form to create and submit a recipe
+
+![create_recipe](documentation/wireframes/create_recipe.png)
+
+/create/item - page for providing the user with a form to create and submit a grocery item/ingredient
+
+![create_item](documentation/wireframes/create_grocery_item.png)
+
 /create/[recipe/item]/confirmation - page for notifying the user that the submitted recipe/item has been accepted and added
 
 ![confirmation](documentation/wireframes/confirmation.png)
