@@ -16,7 +16,7 @@ The application will store grocery Items and Recipes.
 
 (___TODO__: sample documents_)
 
-An Example grocery Item:
+An example grocery Item:
 
 ```javascript
 {
@@ -33,18 +33,23 @@ An Example grocery Item:
 
 ```
 
-An Example List with Embedded Items:
+An example Recipe with embedded grocery Items:
 
 ```javascript
 {
-  user: // a reference to a User object
-  name: "Breakfast foods",
-  items: [
-    { name: "pancakes", quantity: "9876", checked: false},
-    { name: "ramen", quantity: "2", checked: true},
-  ],
-  createdAt: // timestamp
+	name: “Jerk Chicken”,
+	servings: 4,
+	ingredients: [
+	{ category: “meat”, brand: “Trader Joe’s”, name: “boneless skinless chicken breast”, weight: 908, price: 5.58, cals: 880, carbs: 0, fat: 0, protein: 176},
+	{ category: “canned/jarred goods”,  brand: “Grace’s”, name: “hot jerk marinade”, weight: 60, price: 1.32, cals: 0, carbs: 0, fat: 0, protein: 0}
+	]
+	price: 6.90,
+	cals: 880,
+	carbs: 0,
+	fat: 0,
+	protein: 176
 }
+
 ```
 
 
