@@ -20,7 +20,14 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "mongoose": "^5.0.12",
+    "mongoose-auto-increment": "^5.0.1",
     "mongoose-url-slugs": "^1.0.2",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gulp-eslint": "^4.0.2",
+    "gulp-ruby-sass": "^3.0.0",
+    "install": "^0.11.0",
+    "npm": "^5.8.0"
   }
 }
