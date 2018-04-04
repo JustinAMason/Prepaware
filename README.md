@@ -63,6 +63,11 @@ An example Recipe with embedded grocery Items:
 
 ![home](documentation/wireframes/home.png)
 
+/recipes - page for displaying currently existing recipes
+/items - page for displaying currently existing grocery items
+
+![recipes_items](documentation/wireframes/view.png)
+
 ## Site map
 
 (___TODO__: draw out a site map that shows how pages are related to each other_)
