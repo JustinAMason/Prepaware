@@ -48,9 +48,7 @@ An example Recipe with embedded grocery Items:
 
 ```
 
-## [Link to Commented First Draft Schema](db.js) 
-
-(___TODO__: create a first draft of your Schemas in db.js and link to it_)
+## [Link to Commented First Draft Schema](src/db.js) 
 
 ## Wireframes
 
@@ -111,7 +109,6 @@ An example Recipe with embedded grocery Items:
 
 
 8 points total out of 8 required points
-
 
 ## [Link to Initial Main Project File](src/app.js) 
 
