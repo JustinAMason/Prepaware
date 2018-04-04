@@ -63,18 +63,6 @@ An example Recipe with embedded grocery Items:
 
 ![home](documentation/wireframes/home.png)
 
-/list/create - page for creating a new shopping list
-
-![list create](documentation/list-create.png)
-
-/list - page for showing all shopping lists
-
-![list](documentation/list.png)
-
-/list/slug - page for showing specific shopping list
-
-![list](documentation/list-slug.png)
-
 ## Site map
 
 (___TODO__: draw out a site map that shows how pages are related to each other_)
