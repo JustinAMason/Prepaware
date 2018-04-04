@@ -127,3 +127,4 @@ An example Recipe with embedded grocery Items:
 1. [gulp-eslint plugin](https://www.npmjs.com/package/gulp-eslint)
 2. [gulp-ruby-sass plugin](https://www.npmjs.com/package/gulp-ruby-sass)
 3. [mongoose-auto-increment plugin](https://www.npmjs.com/package/mongoose-auto-increment)
+4. [Model for directory structure and initial app.js](https://github.com/nyu-csci-ua-0480-008-spring-2018/jjv222-homework06/tree/master/src)
