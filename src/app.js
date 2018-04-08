@@ -8,8 +8,9 @@ const path = require('path');
 const app = express();
 
 app.set('view engine', 'hbs');
+app.set('views', __dirname + "/views");
 
-app.use(express.static(path.join(__dirname, '/src/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
     secret: 'add session secret here!',
