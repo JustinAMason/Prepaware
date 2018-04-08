@@ -65,7 +65,28 @@ app.post('/create/recipe', (req, res) => {
 
 // Create a Grocery Item (receive form)
 app.post('/create/item', (req, res) => {
-    res.redirect("/");
+
+    const Item = mongoose.model("Item");
+
+    new Item({
+        category: req.body.category,
+        brand: req.body.brand,
+        name: req.body.name,
+        weight: +req.body.weight,
+        price: +req.body.price,
+        cals: +req.body.calories,
+        carbs: +req.body.carbs,
+        fat: +req.body.fat,
+        protein: +req.body.protein
+    }).save(function(err, newItem) {
+        if (err) {
+            res.redirect("/create/failure");
+            console.log(err);
+        } else {
+            res.redirect("/create/success");
+        }
+    });
+
 });
 
 // Creation Success
@@ -78,4 +99,4 @@ app.get('/create/failure', (req, res) => {
     res.render("creation-notification.hbs");
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
