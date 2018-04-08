@@ -73,6 +73,9 @@ ItemSchema.plugin(URLSlugs("name"));
     });
 
 // Models registration
+connection.model("Recipe", RecipeSchema);
+connection.model("Item", ItemSchema);
+
 mongoose.model("Recipe", RecipeSchema);
 mongoose.model("Item", ItemSchema);
 
