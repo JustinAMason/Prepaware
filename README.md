@@ -128,3 +128,7 @@ An example Recipe with embedded grocery Items:
 2. [gulp-ruby-sass plugin](https://www.npmjs.com/package/gulp-ruby-sass)
 3. [mongoose-auto-increment plugin](https://www.npmjs.com/package/mongoose-auto-increment)
 4. [Provided code used as model for initial directory structure and initial app.js](https://github.com/nyu-csci-ua-0480-008-spring-2018/jjv222-homework06/tree/master/src)
+
+## External Help for Troubleshooting
+
+1. ["Unable to set default directory for views"](https://github.com/ericf/express-handlebars/issues/147)
