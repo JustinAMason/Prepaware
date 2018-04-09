@@ -108,7 +108,7 @@ An example Recipe with embedded grocery Items:
 * (2 points) Sass
 	* Sass is "the most mature, stable, and powerful professional grade CSS extension language in the world" (sass-lang.com).
 	* The use of Sass will aid in the styling of the webpages of Prepaware, as intuitive topics such as variable usage and nesting become available in creating stylesheets.
-	* A gulp-ruby-sass plugin exists and is expected to be used.
+	* A gulp-sass plugin exists and is expected to be used.
 	* (Point value specified by rubric)
 
 * (1 point) Auto-Incrementing
@@ -125,7 +125,7 @@ An example Recipe with embedded grocery Items:
 ## Annotations / References Used
 
 1. [gulp-eslint plugin](https://www.npmjs.com/package/gulp-eslint)
-2. [gulp-ruby-sass plugin](https://www.npmjs.com/package/gulp-ruby-sass)
+2. [gulp-sass plugin](https://www.npmjs.com/package/gulp-sass)
 3. [mongoose-auto-increment plugin](https://www.npmjs.com/package/mongoose-auto-increment)
 4. [Provided code used as model for initial directory structure and initial app.js](https://github.com/nyu-csci-ua-0480-008-spring-2018/jjv222-homework06/tree/master/src)
 
