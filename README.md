@@ -126,7 +126,7 @@ An example Recipe with embedded grocery Items:
 	* This module appears to be very straightforward and simple to apply; however, this will be a critical component of recipe creation and is thus vital to the project.
 
 
-8 points total out of 8 required points
+9 points total out of 8 required points
 
 ## [Link to Initial Main Project File](src/app.js) 
 
