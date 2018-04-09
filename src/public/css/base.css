@@ -1,3 +1,37 @@
 @import url("//fonts.googleapis.com/css?family=Carter%20One");
+* {
+  box-sizing: border-box;
+  margin: 0px; }
+
+body {
+  min-width: 700px; }
+
 #website_title {
-  font-family: "Carter One"; }
+  font-family: "Carter One";
+  font-size: 30px;
+  width: 70%;
+  margin: auto;
+  padding: 0px;
+  text-align: center; }
+  #website_title h1 {
+    margin: 5px; }
+
+#navbar {
+  background-color: lightgray;
+  font-family: "Carter One";
+  font-size: 22px;
+  width: 100%;
+  margin: auto;
+  text-align: center; }
+  #navbar ul {
+    list-style: none; }
+  #navbar p {
+    display: inline;
+    margin: 0px 10px; }
+  #navbar li {
+    display: inline-block; }
+    #navbar li a {
+      text-decoration: none;
+      color: black; }
+    #navbar li a:hover {
+      text-decoration: underline; }

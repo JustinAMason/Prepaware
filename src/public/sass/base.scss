@@ -1,8 +1,71 @@
 @import "node_modules/sass-web-fonts/_web-fonts.scss";
 @import url(web-fonts-url("Carter One"));
 
-$logo_font: "Carter One";
+$title_font: "Carter One";
+$large_font: 30px;
+$medium_font: 22px;
+$center: auto;
+$max_width: 100%;
+$min-width: 700px;
+$default_width: 70%;
+$no_spacing: 0px;
+$minimal_spacing: 5px;
+$moderate_spacing: 10px;
+$primary_color: black;
+$secondary_color: lightgray;
+
+* {
+  box-sizing: border-box;
+  margin: $no_spacing;
+}
+
+body {
+  min-width: $min-width;
+}
 
 #website_title {
-  font-family: $logo_font;
+  font-family: $title_font;
+  font-size: $large_font;
+  width: $default_width;
+  margin: $center;
+  padding: $no_spacing;
+  text-align: center;
+
+  h1 {
+    margin: $minimal_spacing;
+  }
+
+}
+
+#navbar {
+  background-color: $secondary_color;
+  font-family: $title_font;
+  font-size: $medium_font;
+  width: $max_width;
+  margin: $center;
+  text-align: center;
+
+  ul {
+    list-style: none;
+  }
+
+  p {
+    display: inline;
+    margin: $no_spacing $moderate_spacing;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      text-decoration: none;
+      color: $primary_color;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  }
+
 }
