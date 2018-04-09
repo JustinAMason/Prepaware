@@ -1,16 +1,21 @@
 @import "node_modules/sass-web-fonts/_web-fonts.scss";
-@import url(web-fonts-url("Carter One"));
 
-$title_font: "Carter One";
-$large_font: 30px;
-$medium_font: 22px;
+@import url(web-fonts-url("Carter One"));
+@import url(web-fonts-url("Acme"));
+
+$title_font: "Carter One", sans-serif;
+$content_font: "Acme", sans-serif;
+$large_font_size: 30px;
+$medium_font_size: 22px;
+$small_font_size: 15px;
 $center: auto;
 $max_width: 100%;
-$min-width: 700px;
+$min-width: 750px;
 $default_width: 70%;
 $no_spacing: 0px;
 $minimal_spacing: 5px;
 $moderate_spacing: 10px;
+$large_spacing: 20px;
 $primary_color: black;
 $secondary_color: lightgray;
 
@@ -25,7 +30,7 @@ body {
 
 #website_title {
   font-family: $title_font;
-  font-size: $large_font;
+  font-size: $large_font_size;
   width: $default_width;
   margin: $center;
   padding: $no_spacing;
@@ -40,10 +45,12 @@ body {
 #navbar {
   background-color: $secondary_color;
   font-family: $title_font;
-  font-size: $medium_font;
+  font-size: $medium_font_size;
   width: $max_width;
+  min-width: $min-width;
   margin: $center;
   text-align: center;
+  position: fixed;
 
   ul {
     list-style: none;
@@ -71,9 +78,47 @@ body {
 }
 
 #page_content {
-  margin: 30px $center;
+  margin: 70px $center;
   width: $default-width;
+  min-width: $min-width;
   padding: $moderate_spacing;
   min-height: 400px;
-  border: 2px gray dashed;
+  font-family: $content_font;
+}
+
+.content_boxes {
+  text-align: center;
+}
+
+a .content_box {
+  vertical-align: top;
+  text-decoration: none;
+  color: black;
+}
+
+.content_box {
+  background-color: $secondary_color;
+  height: 300px;
+  width: $default_width / 3;
+  display: inline-block;
+  text-align: center;
+  margin: 0px 5px;
+  padding: $large-spacing $moderate_spacing;
+  vertical-align: top;
+
+  .box_picture img {
+    width: 100px;
+  }
+
+  .box_header {
+    font-family: $title_font;
+    font-size: $small_font_size;
+    margin-top: $minimal_spacing;
+  }
+
+  .box_description {
+    height: 50%;
+    margin-top: $minimal_spacing;
+  }
+
 }
