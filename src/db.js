@@ -27,49 +27,49 @@ autoIncrement.initialize(mongoose.connection);
 
 // Add your schemas
 
-    // Schema for created recipes
-    const RecipeSchema = new mongoose.Schema({
-        name: String,
-        servings: Number, //# of individual servings yielded by the recipe
-        ingredients: [], // Array of embedded grocery items
-        price: Number,
-        cals: Number,
-        carbs: Number, // Measured in grams
-        fat: Number, // Measured in grams
-        protein: Number // Measured in grams
-    });
+// Schema for created recipes
+const RecipeSchema = new mongoose.Schema({
+    name: String,
+    servings: Number, //# of individual servings yielded by the recipe
+    ingredients: [], // Array of embedded grocery items
+    price: Number,
+    cals: Number,
+    carbs: Number, // Measured in grams
+    fat: Number, // Measured in grams
+    protein: Number // Measured in grams
+});
 
-    // Schema for individual grocery items
-    const ItemSchema = new mongoose.Schema({
-        category: String,
-        brand: String,
-        name: String,
-        weight: Number, // Total weight for grocery item (NOT just one serving)
-        price: Number,
-        cals: Number, // (NOT just one serving)
-        carbs: Number, // Measured in grams (NOT just one serving)
-        fat: Number, // Measured in grams (NOT just one serving)
-        protein: Number // Measured in grams (NOT just one serving)
-    });
+// Schema for individual grocery items
+const ItemSchema = new mongoose.Schema({
+    category: String,
+    brand: String,
+    name: String,
+    weight: Number, // Total weight for grocery item (NOT just one serving)
+    price: Number,
+    cals: Number, // (NOT just one serving)
+    carbs: Number, // Measured in grams (NOT just one serving)
+    fat: Number, // Measured in grams (NOT just one serving)
+    protein: Number // Measured in grams (NOT just one serving)
+});
 
 // Use plugins (for slug)
 RecipeSchema.plugin(URLSlugs("name"));
 ItemSchema.plugin(URLSlugs("name"));
 
 // Use plugins (for auto-increment)
-    RecipeSchema.plugin(autoIncrement.plugin, {
-        model: "name",
-        field: "recipeID",
-        startAt: 1000,
-        incrementBy: 1
-    });
+RecipeSchema.plugin(autoIncrement.plugin, {
+    model: "name",
+    field: "recipeID",
+    startAt: 1000,
+    incrementBy: 1
+});
 
-    ItemSchema.plugin(autoIncrement.plugin, {
-        model: "name",
-        field: "recipeID",
-        startAt: 1000,
-        incrementBy: 1
-    });
+ItemSchema.plugin(autoIncrement.plugin, {
+    model: "name",
+    field: "recipeID",
+    startAt: 1000,
+    incrementBy: 1
+});
 
 // Models registration
 mongoose.model("Recipe", RecipeSchema);
