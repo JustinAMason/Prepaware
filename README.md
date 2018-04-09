@@ -111,6 +111,14 @@ An example Recipe with embedded grocery Items:
 	* A gulp-sass plugin exists and is expected to be used.
 	* (Point value specified by rubric)
 
+* (1 point) Web Fonts via Sass (NEW)
+	* Google Web Fonts provides a large number of fonts available for use to anyone with the desire to use them.
+	* Sass provides an opportunity for the efficient importing of desired web fonts.
+	* A sass-web-fonts module exists (via NPM) and has been used.
+	* This module appears to be very straightforward and simple to apply
+
+"allow easy, efficient usage of Google Web Fonts.
+
 * (1 point) Auto-Incrementing
 	* Auto-incrementing is a concept that would ensure a unique identifier for every document in a collection (note: ObjectID already does that, but potentially asking the user to remember/re-type such a long string may not be feasible).
 	* Auto-incrementing would allow for the formation of a unique ID for every grocery item in the database, and can provide a solution for easy ingredient insertion when a user is creating a recipe.
@@ -128,15 +136,20 @@ Gulp
 
 1. [Gulp.js Plugins](https://gulpjs.com/plugins/)
 
+ESLint
+
+1. [gulp-eslint plugin](https://www.npmjs.com/package/gulp-eslint)
+
 Sass
 
 1. [gulp-sass plugin](https://www.npmjs.com/package/gulp-sass)
 2. [Sass Basics](https://sass-lang.com/guide)
 3. [Gulp.js – Compiling Sass (YouTube)](https://www.youtube.com/watch?v=NkomAUQxYr8)
 
-ESLint
+Web Fonts (via Sass)
 
-1. [gulp-eslint plugin](https://www.npmjs.com/package/gulp-eslint)
+1. [sass-web-fonts (Github)](https://github.com/alyssais/Sass-Web-Fonts)
+2. [sass-web-fonts (npm)](https://www.npmjs.com/package/sass-web-fonts)
 
 Auto-Increment
 
@@ -146,3 +159,4 @@ Miscellaneous
 
 1. ["Unable to set default directory for views"](https://github.com/ericf/express-handlebars/issues/147)
 2. [Provided code used as model for initial directory structure and initial app.js](https://github.com/nyu-csci-ua-0480-008-spring-2018/jjv222-homework06/tree/master/src)
+3. [Carter One Font (via Google Fonts)](https://fonts.google.com/?category=Display&selection.family=Carter+One)
