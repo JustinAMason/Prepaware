@@ -23,8 +23,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
 }
 
 // Initialize auto-incrementing
-const connection = mongoose.createConnection(dbconf);
-autoIncrement.initialize(connection);
+autoIncrement.initialize(mongoose.connection);
 
 // Add your schemas
 
@@ -73,8 +72,8 @@ ItemSchema.plugin(URLSlugs("name"));
     });
 
 // Models registration
-connection.model("Recipe", RecipeSchema);
-connection.model("Item", ItemSchema);
+mongoose.model("Recipe", RecipeSchema);
+mongoose.model("Item", ItemSchema);
 
 // Connect to configured database
 mongoose.connect(dbconf);
