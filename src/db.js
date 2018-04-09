@@ -76,8 +76,5 @@ ItemSchema.plugin(URLSlugs("name"));
 connection.model("Recipe", RecipeSchema);
 connection.model("Item", ItemSchema);
 
-mongoose.model("Recipe", RecipeSchema);
-mongoose.model("Item", ItemSchema);
-
 // Connect to configured database
 mongoose.connect(dbconf);
