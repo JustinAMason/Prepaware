@@ -45,7 +45,7 @@ app.get('/items/:slug', (req, res) => {
 
 // Create
 app.get('/create', (req, res) => {
-    res.render("create.hbs");
+    res.render("create.hbs", {"additionalStylesheet":"/css/create.css"});
 });
 
 // Create a Recipe (send form)
