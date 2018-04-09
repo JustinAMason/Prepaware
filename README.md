@@ -124,11 +124,25 @@ An example Recipe with embedded grocery Items:
 
 ## Annotations / References Used
 
-1. [gulp-eslint plugin](https://www.npmjs.com/package/gulp-eslint)
-2. [gulp-sass plugin](https://www.npmjs.com/package/gulp-sass)
-3. [mongoose-auto-increment plugin](https://www.npmjs.com/package/mongoose-auto-increment)
-4. [Provided code used as model for initial directory structure and initial app.js](https://github.com/nyu-csci-ua-0480-008-spring-2018/jjv222-homework06/tree/master/src)
+Gulp
 
-## External Help for Troubleshooting
+1. [Gulp.js Plugins](https://gulpjs.com/plugins/)
+
+Sass
+
+1. [gulp-sass plugin](https://www.npmjs.com/package/gulp-sass)
+2. [Sass Basics](https://sass-lang.com/guide)
+3. [Gulp.js – Compiling Sass (YouTube)](https://www.youtube.com/watch?v=NkomAUQxYr8)
+
+ESLint
+
+1. [gulp-eslint plugin](https://www.npmjs.com/package/gulp-eslint)
+
+Auto-Increment
+
+1. [mongoose-auto-increment plugin](https://www.npmjs.com/package/mongoose-auto-increment)
+
+Miscellaneous
 
 1. ["Unable to set default directory for views"](https://github.com/ericf/express-handlebars/issues/147)
+2. [Provided code used as model for initial directory structure and initial app.js](https://github.com/nyu-csci-ua-0480-008-spring-2018/jjv222-homework06/tree/master/src)
