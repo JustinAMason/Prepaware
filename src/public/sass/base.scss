@@ -69,3 +69,11 @@ body {
   }
 
 }
+
+#page_content {
+  margin: 30px $center;
+  width: $default-width;
+  padding: $moderate_spacing;
+  min-height: 400px;
+  border: 2px gray dashed;
+}

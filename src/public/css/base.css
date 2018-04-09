@@ -35,3 +35,10 @@ body {
       color: black; }
     #navbar li a:hover {
       text-decoration: underline; }
+
+#page_content {
+  margin: 30px auto;
+  width: 70%;
+  padding: 10px;
+  min-height: 400px;
+  border: 2px gray dashed; }
