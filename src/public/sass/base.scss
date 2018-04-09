@@ -5,17 +5,23 @@
 
 $title_font: "Carter One", sans-serif;
 $content_font: "Acme", sans-serif;
+
 $large_font_size: 30px;
 $medium_font_size: 22px;
 $small_font_size: 15px;
+$tiny_font_size: 10px;
+
 $center: auto;
+
 $max_width: 100%;
 $min-width: 750px;
 $default_width: 70%;
+
 $no_spacing: 0px;
 $minimal_spacing: 5px;
 $moderate_spacing: 10px;
 $large_spacing: 20px;
+
 $primary_color: black;
 $secondary_color: lightgray;
 
@@ -78,11 +84,11 @@ body {
 }
 
 #page_content {
-  margin: 70px $center;
+  margin: 70px $center 0px $center;
   width: $default-width;
   min-width: $min-width;
   padding: $moderate_spacing;
-  min-height: 400px;
+  min-height: 300px;
   font-family: $content_font;
 }
 
@@ -102,7 +108,7 @@ a .content_box {
   width: $default_width / 3;
   display: inline-block;
   text-align: center;
-  margin: 0px 5px;
+  margin: 0px 10px;
   padding: $large-spacing $moderate_spacing;
   vertical-align: top;
 
@@ -121,4 +127,14 @@ a .content_box {
     margin-top: $minimal_spacing;
   }
 
+}
+
+#footer {
+  margin: 5px $center;
+  width: $default_width;
+  padding: $moderate_spacing;
+  font-family: $content_font;
+  font-size: $tiny_font_size;
+  text-align: center;
+  font-style: italic;
 }
