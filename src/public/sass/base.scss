@@ -131,7 +131,7 @@ a .content_box {
 
 .catalogue {
   margin: auto;
-  width: 90%;
+  width: $max_width;
   border-collapse: collapse;
   text-align: left;
 
@@ -140,13 +140,49 @@ a .content_box {
     text-align: center;
   }
 
+  .product_fact {
+    width: 50%;
+
+    a {
+      color: $primary_color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  .nutrition_fact {
+    max-width: 50% / 7;
+  }
+
+  .product_id {
+    max-width: 50% / 7;
+
+    a {
+      color: $primary_color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  }
+
   thead {
-    background-color: lightgray;
+    background-color: $secondary_color;
 
     td {
       font-weight: bold;
     }
 
+  }
+
+  tbody {
+    font-weight: lighter;
   }
 
 }

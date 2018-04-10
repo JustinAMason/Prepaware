@@ -76,16 +76,34 @@ a .content_box {
 
 .catalogue {
   margin: auto;
-  width: 90%;
+  width: 100%;
   border-collapse: collapse;
   text-align: left; }
   .catalogue td {
     border: 1px #272727 solid;
     text-align: center; }
+  .catalogue .product_fact {
+    width: 50%; }
+    .catalogue .product_fact a {
+      color: black;
+      text-decoration: none; }
+    .catalogue .product_fact a:hover {
+      text-decoration: underline; }
+  .catalogue .nutrition_fact {
+    max-width: 50% / 7; }
+  .catalogue .product_id {
+    max-width: 50% / 7; }
+    .catalogue .product_id a {
+      color: black;
+      text-decoration: none; }
+    .catalogue .product_id a:hover {
+      text-decoration: underline; }
   .catalogue thead {
     background-color: lightgray; }
     .catalogue thead td {
       font-weight: bold; }
+  .catalogue tbody {
+    font-weight: lighter; }
 
 #footer {
   margin: 5px auto;

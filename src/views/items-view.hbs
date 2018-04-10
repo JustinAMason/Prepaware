@@ -1,25 +1,28 @@
 <table class="catalogue">
     <thead>
     <tr>
-        <td colspan="3">Product Information</td>
-        <td colspan="6">Nutrition</td>
-    </tr>
-    <tr>
-        <td class="product_fact">Category</td>
-        <td class="product_fact">Brand</td>
-        <td class="product_fact">Name</td>
+        <td class="product_id">ID</td>
+        <td class="product_fact">Product</td>
         <td class="nutrition_fact">Weight (g/mL)</td>
         <td class="nutrition_fact">Price ($)</td>
-        <td class="nutrition_fact">Cals</td>
+        <td class="nutrition_fact">Cal</td>
         <td class="nutrition_fact">Carbs (g)</td>
         <td class="nutrition_fact">Fat (g)</td>
         <td class="nutrition_fact">Prot (g)</td>
     </tr>
     </thead>
     <tbody>
-    <tr>
-
-        <td></td>
-    </tr>
+    {{#each grocery_items}}
+        <tr>
+            <td class="product_id">{{itemID}}</td>
+            <td class="product_fact"><a href="/items/{{name}}" target="_blank">{{brand}} {{name}}</a></td>
+            <td class="nutrition_fact">{{weight}}</td>
+            <td class="nutrition_fact">{{price}}</td>
+            <td class="nutrition_fact">{{cals}}</td>
+            <td class="nutrition_fact">{{carbs}}</td>
+            <td class="nutrition_fact">{{fat}}</td>
+            <td class="nutrition_fact">{{protein}}</td>
+        </tr>
+    {{/each}}
     </tbody>
 </table>
