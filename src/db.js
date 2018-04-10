@@ -66,14 +66,14 @@ RecipeSchema.plugin(autoIncrement.plugin, {
 
 ItemSchema.plugin(autoIncrement.plugin, {
     model: "name",
-    field: "recipeID",
+    field: "itemID",
     startAt: 1000,
     incrementBy: 1
 });
 
 // Models registration
 mongoose.model("Recipe", RecipeSchema);
-mongoose.model("groc", ItemSchema);
+mongoose.model("Grocery_Item", ItemSchema);
 
 // Connect to configured database
 mongoose.connect(dbconf);
