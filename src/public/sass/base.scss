@@ -187,6 +187,21 @@ a .content_box {
 
 }
 
+#content_creation {
+
+  text-align: center;
+  font-family: $title_font;
+
+  #creation_result {
+    font-size: 40px;
+  }
+
+  #creation_description {
+    font-size: 20px;
+  }
+
+}
+
 #footer {
   margin: 5px $center;
   width: $default_width;

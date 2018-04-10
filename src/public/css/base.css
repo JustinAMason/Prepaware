@@ -105,6 +105,14 @@ a .content_box {
   .catalogue tbody {
     font-weight: lighter; }
 
+#content_creation {
+  text-align: center;
+  font-family: "Carter One", sans-serif; }
+  #content_creation #creation_result {
+    font-size: 40px; }
+  #content_creation #creation_description {
+    font-size: 20px; }
+
 #footer {
   margin: 5px auto;
   width: 70%;

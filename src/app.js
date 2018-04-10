@@ -74,35 +74,39 @@ app.post('/create/item', (req, res) => {
 
     const GroceryItem = mongoose.model("Grocery_Item");
 
-    new GroceryItem({
-        category: req.body.category,
-        brand: req.body.brand,
-        name: req.body.name,
-        weight: +req.body.weight,
-        price: +req.body.price,
-        cals: +req.body.calories,
-        carbs: +req.body.carbs,
-        fat: +req.body.fat,
-        protein: +req.body.protein
-    }).save(function(err, newItem) {
-        if (err) {
-            res.redirect("/create/failure");
-            console.log(err);
-        } else {
-            res.redirect("/create/success");
-        }
-    });
+    if (req.body.category === "" || req.body.brand === "" || req.body.name === "" || req.body.weight === "" || req.body.price === "" || req.body.calories === "" || req.body.carbs === "" || req.body.fat === "" || req.body.protein === "") {
+        res.redirect("/create/failure");
+    } else {
+        new GroceryItem({
+            category: req.body.category,
+            brand: req.body.brand,
+            name: req.body.name,
+            weight: +req.body.weight,
+            price: +req.body.price,
+            cals: +req.body.calories,
+            carbs: +req.body.carbs,
+            fat: +req.body.fat,
+            protein: +req.body.protein
+        }).save(function(err, newItem) {
+            if (err) {
+                res.redirect("/create/failure");
+                console.log(err);
+            } else {
+                res.redirect("/create/success");
+            }
+        });
+    }
 
 });
 
 // Creation Success
 app.get('/create/success', (req, res) => {
-    res.render("creation-notification.hbs");
+    res.render("creation-notification.hbs", {"result": "Congratulations!", "description": "Your submission has been accepted and is now available to the community!"});
 });
 
 // Creation Failure
 app.get('/create/failure', (req, res) => {
-    res.render("creation-notification.hbs");
+    res.render("creation-notification.hbs", {"result": "Sorry,", "description": "Your submission was unable to be accepted. Your submission may have included empty fields or letters where numbers are requested. Please try again."});
 });
 
 app.listen(process.env.PORT || 3000);
