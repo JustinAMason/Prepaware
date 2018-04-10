@@ -74,6 +74,19 @@ a .content_box {
     height: 50%;
     margin-top: 5px; }
 
+.catalogue {
+  margin: auto;
+  width: 90%;
+  border-collapse: collapse;
+  text-align: left; }
+  .catalogue td {
+    border: 1px #272727 solid;
+    text-align: center; }
+  .catalogue thead {
+    background-color: lightgray; }
+    .catalogue thead td {
+      font-weight: bold; }
+
 #footer {
   margin: 5px auto;
   width: 70%;

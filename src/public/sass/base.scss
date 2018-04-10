@@ -129,6 +129,28 @@ a .content_box {
 
 }
 
+.catalogue {
+  margin: auto;
+  width: 90%;
+  border-collapse: collapse;
+  text-align: left;
+
+  td {
+    border: 1px #272727 solid;
+    text-align: center;
+  }
+
+  thead {
+    background-color: lightgray;
+
+    td {
+      font-weight: bold;
+    }
+
+  }
+
+}
+
 #footer {
   margin: 5px $center;
   width: $default_width;
