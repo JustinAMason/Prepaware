@@ -67,7 +67,7 @@ app.post('/create/recipe', (req, res) => {
 // Create a Grocery Item (receive form)
 app.post('/create/item', (req, res) => {
 
-    const Item = mongoose.model("Item");
+    const Item = mongoose.model("groc");
 
     new Item({
         category: req.body.category,

@@ -73,7 +73,7 @@ ItemSchema.plugin(autoIncrement.plugin, {
 
 // Models registration
 mongoose.model("Recipe", RecipeSchema);
-mongoose.model("Item", ItemSchema);
+mongoose.model("groc", ItemSchema);
 
 // Connect to configured database
 mongoose.connect(dbconf);
