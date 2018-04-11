@@ -105,6 +105,15 @@ a .content_box {
   .catalogue tbody {
     font-weight: lighter; }
 
+#item_create {
+  text-align: center; }
+  #item_create h3 {
+    margin: 15px; }
+  #item_create #create-item_product-info input {
+    width: 200px; }
+  #item_create #create-item_nutritional-info input {
+    width: 50px; }
+
 #content_creation {
   text-align: center;
   font-family: "Carter One", sans-serif; }

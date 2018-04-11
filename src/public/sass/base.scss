@@ -187,6 +187,27 @@ a .content_box {
 
 }
 
+#item_create {
+  text-align: center;
+
+  h3 {
+    margin: 15px;
+  }
+
+  #create-item_product-info {
+    input {
+      width: 200px;
+    }
+  }
+
+  #create-item_nutritional-info {
+    input {
+      width: 50px;
+    }
+  }
+
+}
+
 #content_creation {
 
   text-align: center;
