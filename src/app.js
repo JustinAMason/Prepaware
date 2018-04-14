@@ -2,8 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const db = require('./db');
-const readData = require("./readData");
-const writeData = require("./writeData");
 
 const GroceryItem = mongoose.model("Grocery_Item");
 const session = require('express-session');
@@ -34,6 +32,7 @@ app.get('/recipes', (req, res) => {
 
 // View Grocery Items
 app.get('/items', (req, res) => {
+
     GroceryItem.find({}, function(err, grocery_items) {
         res.render("items-view.hbs", {"grocery_items": grocery_items});
     });
