@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
 const db = require('./db');
 
+const queryCollection = require("./readData");
+
 const GroceryItem = mongoose.model("Grocery_Item");
 const session = require('express-session');
 const path = require('path');
@@ -34,7 +36,17 @@ app.get('/recipes', (req, res) => {
 app.get('/items', (req, res) => {
 
     GroceryItem.find({}, function(err, grocery_items) {
-        res.render("items-view.hbs", {"grocery_items": grocery_items});
+
+        Object.keys(req.query).forEach(function(key) {
+            grocery_items = queryCollection.filterDocuments(grocery_items, key, req.query[key]);
+        });
+
+        if (grocery_items.length !== 0) {
+            res.render("items-view.hbs", {"grocery_items": grocery_items});
+        } else {
+            res.render("items-view.hbs", {"grocery_items": grocery_items, "message": "Sorry, no grocery item meeting those specifications currently exists."});
+        }
+
     });
 
 });
