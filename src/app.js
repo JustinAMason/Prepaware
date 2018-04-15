@@ -40,7 +40,7 @@ app.get('/recipes', (req, res) => {
 
         if (recipes.length !== 0) {
 
-            /*recipes = readData.getPerServingNutrition(recipes);*/
+            recipes = readData.getPerServingNutrition(recipes);
 
             res.render("recipes-view.hbs", {
                 "recipes": recipes
