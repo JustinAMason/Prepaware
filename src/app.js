@@ -104,12 +104,13 @@ app.post('/create/item', (req, res) => {
             category: req.body.category,
             brand: req.body.brand,
             name: req.body.name,
-            weight: +req.body.weight,
             price: +req.body.price,
-            cals: +req.body.calories,
-            carbs: +req.body.carbs,
-            fat: +req.body.fat,
-            protein: +req.body.protein
+            servings: +req.body.servings,
+            weight: +req.body.weight * +req.body.servings,
+            cals: +req.body.calories * +req.body.servings,
+            carbs: +req.body.carbs * +req.body.servings,
+            fat: +req.body.fat * +req.body.servings,
+            protein: +req.body.protein * +req.body.servings
         }).save(function(err, newItem) {
             if (err) {
                 res.redirect("/create/failure");
