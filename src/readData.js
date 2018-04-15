@@ -9,6 +9,20 @@ function filterDocuments(documents, key, value) {
     }
 }
 
+function getPerServingNutrition(documents) {
+    documents.forEach(function(document) {
+        document.price = (document.price / document.servings).toFixed(2);
+        document.weight /= document.servings;
+        document.cals /= document.servings;
+        document.carbs /= document.servings;
+        document.fat /= document.servings;
+        document.protein /= document.servings;
+    });
+
+    return(documents);
+}
+
 module.exports = {
-    filterDocuments: filterDocuments
+    filterDocuments: filterDocuments,
+    getPerServingNutrition: getPerServingNutrition
 }

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const db = require('./db');
 
-const queryCollection = require("./readData");
+const modifyQuery = require("./readData");
 
 const GroceryItem = mongoose.model("Grocery_Item");
 const session = require('express-session');
@@ -40,10 +40,13 @@ app.get('/items', (req, res) => {
     GroceryItem.find({}, function(err, grocery_items) {
 
         Object.keys(req.query).forEach(function(key) {
-            grocery_items = queryCollection.filterDocuments(grocery_items, key, req.query[key]);
+            grocery_items = modifyQuery.filterDocuments(grocery_items, key, req.query[key]);
         });
 
         if (grocery_items.length !== 0) {
+
+            grocery_items = modifyQuery.getPerServingNutrition(grocery_items);
+
             res.render("items-view.hbs", {
                 "grocery_items": grocery_items
             });
@@ -66,6 +69,7 @@ app.get('/recipes/:slug', (req, res) => {
 // View Specific Grocery Item
 app.get('/items/:slug', (req, res) => {
     GroceryItem.find({"slug": req.params.slug}, function(err, grocery_item) {
+        grocery_item = modifyQuery.getPerServingNutrition(grocery_item);
         res.render("item-view.hbs", {"grocery_item": grocery_item[0]});
 
     });
