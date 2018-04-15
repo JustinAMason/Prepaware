@@ -34,9 +34,9 @@ app.get('/recipes', (req, res) => {
 
     Recipe.find({}, function(err, recipes) {
 
-        /*Object.keys(req.query).forEach(function(key) {
+        Object.keys(req.query).forEach(function(key) {
             recipes = readData.filterDocuments(recipes, key, req.query[key]);
-        });*/
+        });
 
         if (recipes.length !== 0) {
 
