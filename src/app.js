@@ -96,11 +96,44 @@ app.post('/create/recipe', (req, res) => {
 
     const ingredients = [];
 
-    console.log(req.body);
-    console.log(req.body.price);
+    // Maintain previously given ingredients
+    if (req.body.price !== undefined) {
+
+        //One ingredient previously given
+        if (typeof(req.body.name) === "string") {
+            ingredients.push({
+                "name": req.body.name.trim(),
+                "weight": req.body.weight,
+                "price": req.body.price,
+                "cals": req.body.cals,
+                "carbs": req.body.carbs,
+                "fat": req.body.fat,
+                "protein": req.body.protein
+            });
+        // Multiple ingredients previously given
+        } else {
+            for (let i = 0; i < req.body.name.length; i++) {
+                ingredients.push({
+                    "name": req.body.name[i].trim(),
+                    "weight": req.body.weight[i],
+                    "price": req.body.price[i],
+                    "cals": req.body.cals[i],
+                    "carbs": req.body.carbs[i],
+                    "fat": req.body.fat[i],
+                    "protein": req.body.protein[i]
+                });
+            }
+        }
+    }
 
     // RECIPE SUBMISSION
         if (req.body.add === "recipe") {
+
+            if (ingredients.length === 0) {
+                res.redirect("/create/failure");
+            } else {
+                res.redirect("/create/success");
+            }
 
     // INGREDIENT ADDITION TO RECIPE
         } else if (req.body.add === "ingredient") {
@@ -140,7 +173,7 @@ app.post('/create/item', (req, res) => {
         new GroceryItem({
             category: req.body.category,
             brand: req.body.brand,
-            name: req.body.name,
+            name: req.body.name.trim(),
             price: +req.body.price,
             servings: +req.body.servings,
             weight: +req.body.weight * +req.body.servings,
