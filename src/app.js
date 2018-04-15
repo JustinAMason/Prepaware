@@ -24,12 +24,14 @@ app.use(session({
 
 // Homepage
 app.get('/', (req, res) => {
-    res.render("index.hbs");
+    res.render("index.hbs", {
+    });
 });
 
 // View Recipes
 app.get('/recipes', (req, res) => {
-    res.render("recipes-view.hbs");
+    res.render("recipes-view.hbs", {
+    });
 });
 
 // View Grocery Items
@@ -42,9 +44,14 @@ app.get('/items', (req, res) => {
         });
 
         if (grocery_items.length !== 0) {
-            res.render("items-view.hbs", {"grocery_items": grocery_items});
+            res.render("items-view.hbs", {
+                "grocery_items": grocery_items
+            });
         } else {
-            res.render("items-view.hbs", {"grocery_items": grocery_items, "message": "Sorry, no grocery item meeting those specifications currently exists."});
+            res.render("items-view.hbs", {
+                "grocery_items": grocery_items,
+                "message": "Sorry, no grocery item meeting those specifications currently exists."
+            });
         }
 
     });
