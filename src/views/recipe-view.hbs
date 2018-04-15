@@ -24,6 +24,9 @@
         <ul>
         {{#each recipe.ingredients}}
             <li>{{this.weight}}g of <a href="/items/{{this.slug}}" target="_blank">{{this.name}}</a></li>
+            <ul style="list-style-type: none">
+                <li style="font-size: 14px">{{this.cals}} calories, {{this.carbs}}g carbs, {{this.fat}}g fat, {{this.protein}}g protein</li>
+            </ul>
         {{/each}}
         </ul>
     </div>

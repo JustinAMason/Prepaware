@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="67e763ad-8900-40a2-bde9-73a84817f765" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/base.css" afterPath="$PROJECT_DIR$/src/public/css/base.css" />
-      <change beforePath="$PROJECT_DIR$/src/public/sass/base.scss" afterPath="$PROJECT_DIR$/src/public/sass/base.scss" />
-      <change beforePath="$PROJECT_DIR$/src/views/recipes-add.hbs" afterPath="$PROJECT_DIR$/src/views/recipes-add.hbs" />
+      <change beforePath="$PROJECT_DIR$/src/views/recipe-view.hbs" afterPath="$PROJECT_DIR$/src/views/recipe-view.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="103">
@@ -53,12 +50,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe-view.hbs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recipe-view.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/recipe-view.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="33" column="80" lean-forward="false" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
-              <folding />
+            <state relative-caret-position="128">
+              <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#ul#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,8 +148,8 @@
       <file leaf-file-name="recipes-view.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/recipes-view.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+            <state relative-caret-position="-99">
+              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -228,10 +227,10 @@
         <option value="$PROJECT_DIR$/src/views/recipes-view.hbs" />
         <option value="$PROJECT_DIR$/src/views/items-view.hbs" />
         <option value="$PROJECT_DIR$/src/public/css/base.css" />
-        <option value="$PROJECT_DIR$/src/views/recipe-view.hbs" />
         <option value="$PROJECT_DIR$/src/views/recipes-add.hbs" />
         <option value="$PROJECT_DIR$/src/public/sass/base.scss" />
         <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/views/recipe-view.hbs" />
       </list>
     </option>
   </component>
@@ -391,12 +390,12 @@
       <workItem from="1523377252705" duration="9034000" />
       <workItem from="1523460330717" duration="3029000" />
       <workItem from="1523730858329" duration="18018000" />
-      <workItem from="1523821832778" duration="5488000" />
+      <workItem from="1523821832778" duration="5776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65988000" />
+    <option name="totallyTimeSpent" value="66276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="0" />
@@ -663,22 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/items-add.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="17" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/recipes-view.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/items-view.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -701,14 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-139">
           <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="4" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/recipe-view.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="33" column="80" lean-forward="false" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -767,6 +742,32 @@
             <element signature="e#8844#9922#0" expanded="false" />
             <element signature="e#9987#10158#0" expanded="false" />
             <element signature="e#10223#10459#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/items-add.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/recipes-view.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/recipe-view.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#ul#0;n#div#4;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
