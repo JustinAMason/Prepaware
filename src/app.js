@@ -139,16 +139,16 @@ app.post('/create/recipe', (req, res) => {
         } else if (req.body.add === "ingredient") {
 
             // Add ingredient to current recipe (if valid)
-            if (req.body.newItemID === "" && req.body.newItem_weight === "") {
-                res.render("recipes-add", {"error": "INGREDIENT INFORMATION NOT GIVEN"});
-            } else if (req.body.newItemID === "") {
-                res.render("recipes-add", {"error": "ITEM ID NOT GIVEN"});
+            if (req.body.newItem_ID === "" && req.body.newItem_weight === "") {
+                res.render("recipes-add", {"ingredients": ingredients, "error": "INGREDIENT INFORMATION NOT GIVEN"});
+            } else if (req.body.newItem_ID === "") {
+                res.render("recipes-add", {"ingredients": ingredients, "error": "ITEM ID NOT GIVEN"});
             } else if (req.body.newItem_weight === "") {
-                res.render("recipes-add", {"error": "ITEM AMOUNT NOT GIVEN"});
+                res.render("recipes-add", {"ingredients": ingredients, "error": "ITEM AMOUNT NOT GIVEN"});
             } else {
                 GroceryItem.find({"itemID": req.body.newItem_ID}, function(err, grocery_items) {
                     if (grocery_items.length === 0) {
-                        res.render("recipes-add", {"error": "NO ITEM FOUND WITH GIVEN ID"});
+                        res.render("recipes-add", {"ingredients": ingredients, "error": "NO ITEM FOUND WITH GIVEN ID"});
                     } else {
                         let grocery_item = grocery_items[0];
                         grocery_item = modifyQuery.getScaledNutrition(grocery_item, req.body.newItem_weight);
