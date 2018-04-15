@@ -114,6 +114,13 @@ a .content_box {
   #item_create #create-item_nutritional-info input {
     width: 50px; }
 
+#item_listing #item_title {
+  text-align: center;
+  margin-bottom: 10px; }
+
+#item_listing .item_fact {
+  margin: 10px 0px; }
+
 #content_creation {
   text-align: center;
   font-family: "Carter One", sans-serif; }

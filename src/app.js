@@ -58,7 +58,10 @@ app.get('/recipes/:slug', (req, res) => {
 
 // View Specific Grocery Item
 app.get('/items/:slug', (req, res) => {
-    res.render("item-view.hbs");
+    GroceryItem.find({"slug": req.params.slug}, function(err, grocery_item) {
+        res.render("item-view.hbs", {"grocery_item": grocery_item[0]});
+
+    });
 });
 
 // Create
