@@ -22,7 +22,24 @@ function getPerServingNutrition(documents) {
     return(documents);
 }
 
+// Scaled according to given amount
+function getScaledNutrition(document, amount) {
+
+    const scale = amount / document.weight;
+
+    document.weight = amount;
+    document.price *= scale;
+    document.cals *= scale;
+    document.carbs *= scale;
+    document.fat *= scale;
+    document.protein *= scale;
+
+    return(document);
+
+}
+
 module.exports = {
     filterDocuments: filterDocuments,
-    getPerServingNutrition: getPerServingNutrition
+    getPerServingNutrition: getPerServingNutrition,
+    getScaledNutrition: getScaledNutrition
 }

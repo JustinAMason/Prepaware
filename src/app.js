@@ -94,30 +94,37 @@ app.get('/create/item', (req, res) => {
 // Create a Recipe (receive form)
 app.post('/create/recipe', (req, res) => {
 
+    const ingredients = [];
+
     console.log(req.body);
     console.log(req.body.price);
 
     // RECIPE SUBMISSION
-    if (req.body.add === "recipe") {
+        if (req.body.add === "recipe") {
 
     // INGREDIENT ADDITION TO RECIPE
-    } else if (req.body.add === "ingredient") {
-        if (req.body.itemID === "" && req.body.weight === "") {
-            res.render("recipes-add", {"error": "INGREDIENT INFORMATION NOT GIVEN"});
-        } else if (req.body.itemID === "") {
-            res.render("recipes-add", {"error": "ITEM ID NOT GIVEN"});
-        } else if (req.body.weight === "") {
-            res.render("recipes-add", {"error": "ITEM AMOUNT NOT GIVEN"});
-        } else {
-            GroceryItem.find({"itemID": req.body.newItem_ID}, function(err, grocery_items) {
-                if (grocery_items.length === 0) {
-                    res.render("recipes-add", {"error": "NO ITEM FOUND WITH GIVEN ID"});
-                } else {
-                    res.render("recipes-add", {"ingredients": grocery_items});
-                }
-            });
+        } else if (req.body.add === "ingredient") {
+
+            // Add ingredient to current recipe (if valid)
+            if (req.body.newItemID === "" && req.body.newItem_weight === "") {
+                res.render("recipes-add", {"error": "INGREDIENT INFORMATION NOT GIVEN"});
+            } else if (req.body.newItemID === "") {
+                res.render("recipes-add", {"error": "ITEM ID NOT GIVEN"});
+            } else if (req.body.newItem_weight === "") {
+                res.render("recipes-add", {"error": "ITEM AMOUNT NOT GIVEN"});
+            } else {
+                GroceryItem.find({"itemID": req.body.newItem_ID}, function(err, grocery_items) {
+                    if (grocery_items.length === 0) {
+                        res.render("recipes-add", {"error": "NO ITEM FOUND WITH GIVEN ID"});
+                    } else {
+                        let grocery_item = grocery_items[0];
+                        grocery_item = modifyQuery.getScaledNutrition(grocery_item, req.body.newItem_weight);
+                        ingredients.push(grocery_item);
+                        res.render("recipes-add", {"ingredients": ingredients});
+                    }
+                });
+            }
         }
-    }
 
     //res.redirect("/");
 });

@@ -4,7 +4,7 @@
     <list default="true" id="67e763ad-8900-40a2-bde9-73a84817f765" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
-      <change beforePath="$PROJECT_DIR$/src/views/recipes-add.hbs" afterPath="$PROJECT_DIR$/src/views/recipes-add.hbs" />
+      <change beforePath="$PROJECT_DIR$/src/readData.js" afterPath="$PROJECT_DIR$/src/readData.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="114" column="24" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+            <state relative-caret-position="322">
+              <caret line="120" column="42" lean-forward="false" selection-start-line="120" selection-start-column="42" selection-end-line="120" selection-end-column="42" />
               <folding>
                 <element signature="e#494#585#0" expanded="false" />
                 <element signature="e#629#670#0" expanded="false" />
@@ -34,9 +34,21 @@
                 <element signature="e#1984#2061#0" expanded="false" />
                 <element signature="e#2136#2174#0" expanded="false" />
                 <element signature="e#2253#2290#0" expanded="false" />
-                <element signature="e#3480#4551#0" expanded="false" />
-                <element signature="e#4616#4787#0" expanded="false" />
-                <element signature="e#4852#5088#0" expanded="false" />
+                <element signature="e#3888#4959#0" expanded="false" />
+                <element signature="e#5024#5195#0" expanded="false" />
+                <element signature="e#5260#5496#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readData.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/readData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+              <folding>
+                <element signature="n#!!block;n#filterDocuments#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -145,16 +157,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item-view.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/item-view.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -187,6 +189,7 @@
       <find>curpage</find>
       <find>querycoll</find>
       <find>per</find>
+      <find>req.body.weight</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -217,11 +220,11 @@
         <option value="$PROJECT_DIR$/src/views/layout.hbs" />
         <option value="$PROJECT_DIR$/src/writeData.js" />
         <option value="$PROJECT_DIR$/src/db.js" />
-        <option value="$PROJECT_DIR$/src/readData.js" />
         <option value="$PROJECT_DIR$/src/views/item-view.hbs" />
         <option value="$PROJECT_DIR$/src/public/sass/base.scss" />
         <option value="$PROJECT_DIR$/src/views/recipes-add.hbs" />
         <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/readData.js" />
       </list>
     </option>
   </component>
@@ -380,12 +383,12 @@
       <workItem from="1523286659843" duration="11734000" />
       <workItem from="1523377252705" duration="9034000" />
       <workItem from="1523460330717" duration="3029000" />
-      <workItem from="1523730858329" duration="14295000" />
+      <workItem from="1523730858329" duration="15022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56777000" />
+    <option name="totallyTimeSpent" value="57504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="0" />
@@ -396,7 +399,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32854864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32854864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33652312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -444,9 +447,9 @@
             <element signature="e#1984#2061#0" expanded="false" />
             <element signature="e#2136#2174#0" expanded="false" />
             <element signature="e#2253#2290#0" expanded="false" />
-            <element signature="e#3480#4551#0" expanded="false" />
-            <element signature="e#4616#4787#0" expanded="false" />
-            <element signature="e#4852#5088#0" expanded="false" />
+            <element signature="e#3888#4959#0" expanded="false" />
+            <element signature="e#5024#5195#0" expanded="false" />
+            <element signature="e#5260#5496#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -647,14 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/readData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/item-view.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -752,8 +747,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="114" column="24" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+        <state relative-caret-position="322">
+          <caret line="120" column="42" lean-forward="false" selection-start-line="120" selection-start-column="42" selection-end-line="120" selection-end-column="42" />
           <folding>
             <element signature="e#494#585#0" expanded="false" />
             <element signature="e#629#670#0" expanded="false" />
@@ -765,9 +760,19 @@
             <element signature="e#1984#2061#0" expanded="false" />
             <element signature="e#2136#2174#0" expanded="false" />
             <element signature="e#2253#2290#0" expanded="false" />
-            <element signature="e#3480#4551#0" expanded="false" />
-            <element signature="e#4616#4787#0" expanded="false" />
-            <element signature="e#4852#5088#0" expanded="false" />
+            <element signature="e#3888#4959#0" expanded="false" />
+            <element signature="e#5024#5195#0" expanded="false" />
+            <element signature="e#5260#5496#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!block;n#filterDocuments#0" expanded="false" />
           </folding>
         </state>
       </provider>
