@@ -31,8 +31,33 @@ app.get('/', (req, res) => {
 
 // View Recipes
 app.get('/recipes', (req, res) => {
-    res.render("recipes-view.hbs", {
+
+    Recipe.find({}, function(err, recipes) {
+
+        /*Object.keys(req.query).forEach(function(key) {
+            recipes = readData.filterDocuments(recipes, key, req.query[key]);
+        });*/
+
+        if (recipes.length !== 0) {
+
+            /*recipes = readData.getPerServingNutrition(recipes);*/
+
+            res.render("recipes-view.hbs", {
+                "recipes": recipes
+            });
+
+        } else {
+            res.render("recipes-view.hbs", {
+                "grocery_items": recipes,
+                "message": "Sorry, no recipes meeting those specifications currently exists."
+            });
+        }
+
     });
+
+
+    /*res.render("recipes-view.hbs", {
+    });*/
 });
 
 // View Grocery Items
