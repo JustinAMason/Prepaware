@@ -3,9 +3,10 @@ const mongoose = require('mongoose');
 
 const db = require('./db');
 
-const modifyQuery = require("./readData");
+const readData = require("./readData");
 
 const GroceryItem = mongoose.model("Grocery_Item");
+const Recipe = mongoose.model("Recipe");
 const session = require('express-session');
 const path = require('path');
 
@@ -40,12 +41,12 @@ app.get('/items', (req, res) => {
     GroceryItem.find({}, function(err, grocery_items) {
 
         Object.keys(req.query).forEach(function(key) {
-            grocery_items = modifyQuery.filterDocuments(grocery_items, key, req.query[key]);
+            grocery_items = readData.filterDocuments(grocery_items, key, req.query[key]);
         });
 
         if (grocery_items.length !== 0) {
 
-            grocery_items = modifyQuery.getPerServingNutrition(grocery_items);
+            grocery_items = readData.getPerServingNutrition(grocery_items);
 
             res.render("items-view.hbs", {
                 "grocery_items": grocery_items
@@ -69,7 +70,7 @@ app.get('/recipes/:slug', (req, res) => {
 // View Specific Grocery Item
 app.get('/items/:slug', (req, res) => {
     GroceryItem.find({"slug": req.params.slug}, function(err, grocery_item) {
-        grocery_item = modifyQuery.getPerServingNutrition(grocery_item);
+        grocery_item = readData.getPerServingNutrition(grocery_item);
         res.render("item-view.hbs", {"grocery_item": grocery_item[0]});
 
     });
@@ -122,7 +123,8 @@ app.post('/create/recipe', (req, res) => {
                 "cals": req.body.cals,
                 "carbs": req.body.carbs,
                 "fat": req.body.fat,
-                "protein": req.body.protein
+                "protein": req.body.protein,
+                "slug": req.body.slug
             });
         // Multiple ingredients previously given
         } else {
@@ -140,7 +142,8 @@ app.post('/create/recipe', (req, res) => {
                     "cals": req.body.cals[i],
                     "carbs": req.body.carbs[i],
                     "fat": req.body.fat[i],
-                    "protein": req.body.protein[i]
+                    "protein": req.body.protein[i],
+                    "slug": req.body.slug[i]
                 });
             }
         }
@@ -152,7 +155,24 @@ app.post('/create/recipe', (req, res) => {
             if (ingredients.length === 0) {
                 res.redirect("/create/failure");
             } else {
-                res.redirect("/create/success");
+
+                new Recipe({
+                    name: req.body.recipe_name,
+                    servings: req.body.recipe_servings,
+                    ingredients: ingredients,
+                    price: totalNutrition.price,
+                    cals: totalNutrition.cals,
+                    carbs: totalNutrition.carbs,
+                    fat: totalNutrition.fat,
+                    protein: totalNutrition.protein
+                }).save(function(err, newItem) {
+                    if (err) {
+                        res.redirect("/create/failure");
+                    } else {
+                        res.redirect("/create/success");
+                    }
+                });
+
             }
 
     // INGREDIENT ADDITION TO RECIPE
@@ -187,7 +207,7 @@ app.post('/create/recipe', (req, res) => {
                         });
                     } else {
                         let grocery_item = grocery_items[0];
-                        grocery_item = modifyQuery.getScaledNutrition(grocery_item, req.body.newItem_weight);
+                        grocery_item = readData.getScaledNutrition(grocery_item, req.body.newItem_weight);
                         ingredients.push(grocery_item);
 
                         totalNutrition.weight += +grocery_item.weight;
@@ -205,8 +225,6 @@ app.post('/create/recipe', (req, res) => {
                 });
             }
         }
-
-    //res.redirect("/");
 });
 
 // Create a Grocery Item (receive form)

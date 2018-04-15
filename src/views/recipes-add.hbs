@@ -6,6 +6,10 @@
 
     <div class="recipe_add_section">
         <h3>Submit Recipe to Community:</h3>
+        <label for="recipe_name">Recipe Name: </label>
+        <input type="text" id="recipe_name" name="recipe_name" value="" style="width: 150px"><br>
+        <label for="recipe_name"># of Servings: </label>
+        <input type="text" id="recipe_servings" name="recipe_servings" value="" style="width: 50px"><br>
         <button type="submit" name="add" value="recipe">Submit Recipe</button>
     </div>
 
@@ -45,6 +49,7 @@
                     <td class="nutrition_fact"><input type="text" name="carbs" value="{{this.carbs}}" readonly></td>
                     <td class="nutrition_fact"><input type="text" name="fat" value="{{this.fat}}" readonly></td>
                     <td class="nutrition_fact"><input type="text" name="protein" value="{{this.protein}}" readonly></td>
+                    <td class="nutrition_fact" style="visibility: hidden"><input type="text" name="slug" value="{{this.slug}}" readonly></td>
                 </tr>
             {{/each}}
         </tbody>
