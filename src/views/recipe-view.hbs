@@ -1,0 +1,39 @@
+<div id="item_listing">
+    <div id="item_title">
+        <h2>{{recipe.name}}</h2>
+        <h3>(ID #{{recipe.recipeID}})</h3>
+    </div>
+
+    <div class="item_fact">
+        <h3>Name:</h3>
+        <h4>{{recipe.name}}</h4>
+    </div>
+
+    <div class="item_fact">
+        <h3>Total Price:</h3>
+        <h4>${{recipe.price}}</h4>
+    </div>
+
+    <div class="item_fact">
+        <h3>Servings:</h3>
+        <h4>{{recipe.servings}}</h4>
+    </div>
+
+    <div class="recipe">
+        <h3>Recipe:</h3>
+        <ul>
+        {{#each recipe.ingredients}}
+            <li>{{this.weight}}g of <a href="/items/{{this.slug}}" target="_blank">{{this.name}}</a></li>
+        {{/each}}
+        </ul>
+    </div>
+
+    <div class="item_fact">
+        <h3>About this Recipe:</h3>
+        <ul>
+            <li><h4>One serving of {{recipe.name}} costs around ${{serving_price}}.</h4></li>
+            <li><h4>One serving of this recipe contains {{recipe.cals}} calories, {{recipe.carbs}}g of carbs, {{recipe.fat}}g of fat, and {{recipe.protein}}g of protein.</h4></li>
+        </ul>
+    </div>
+
+</div>

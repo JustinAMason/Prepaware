@@ -240,6 +240,17 @@ a .content_box {
 
 }
 
+li {
+  a {
+    text-decoration: none;
+    color: $primary_color;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 #footer {
   margin: 5px $center;
   width: $default_width;

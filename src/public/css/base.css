@@ -132,6 +132,13 @@ a .content_box {
   #content_creation #creation_description {
     font-size: 20px; }
 
+li a {
+  text-decoration: none;
+  color: black; }
+
+li a:hover {
+  text-decoration: underline; }
+
 #footer {
   margin: 5px auto;
   width: 70%;
