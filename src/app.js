@@ -95,12 +95,26 @@ app.get('/create/item', (req, res) => {
 app.post('/create/recipe', (req, res) => {
 
     const ingredients = [];
+    const totalNutrition = {
+        weight: 0,
+        price: 0,
+        cals: 0,
+        carbs: 0,
+        fat: 0,
+        protein: 0
+    };
 
     // Maintain previously given ingredients
     if (req.body.price !== undefined) {
 
         //One ingredient previously given
         if (typeof(req.body.name) === "string") {
+            totalNutrition.weight += +req.body.weight;
+            totalNutrition.price += +req.body.price;
+            totalNutrition.cals += +req.body.cals;
+            totalNutrition.carbs += +req.body.carbs;
+            totalNutrition.fat += +req.body.fat;
+            totalNutrition.protein += +req.body.protein;
             ingredients.push({
                 "name": req.body.name.trim(),
                 "weight": req.body.weight,
@@ -113,6 +127,12 @@ app.post('/create/recipe', (req, res) => {
         // Multiple ingredients previously given
         } else {
             for (let i = 0; i < req.body.name.length; i++) {
+                totalNutrition.weight += +req.body.weight[i];
+                totalNutrition.price += +req.body.price[i];
+                totalNutrition.cals += +req.body.cals[i];
+                totalNutrition.carbs += +req.body.carbs[i];
+                totalNutrition.fat += +req.body.fat[i];
+                totalNutrition.protein += +req.body.protein[i];
                 ingredients.push({
                     "name": req.body.name[i].trim(),
                     "weight": req.body.weight[i],
@@ -140,20 +160,47 @@ app.post('/create/recipe', (req, res) => {
 
             // Add ingredient to current recipe (if valid)
             if (req.body.newItem_ID === "" && req.body.newItem_weight === "") {
-                res.render("recipes-add", {"ingredients": ingredients, "error": "INGREDIENT INFORMATION NOT GIVEN"});
+                res.render("recipes-add", {
+                    "ingredients": ingredients,
+                    "error": "INGREDIENT INFORMATION NOT GIVEN",
+                    "total": totalNutrition
+                });
             } else if (req.body.newItem_ID === "") {
-                res.render("recipes-add", {"ingredients": ingredients, "error": "ITEM ID NOT GIVEN"});
+                res.render("recipes-add", {
+                    "ingredients": ingredients,
+                    "error": "ITEM ID NOT GIVEN",
+                    "total": totalNutrition
+                });
             } else if (req.body.newItem_weight === "") {
-                res.render("recipes-add", {"ingredients": ingredients, "error": "ITEM AMOUNT NOT GIVEN"});
+                res.render("recipes-add", {
+                    "ingredients": ingredients,
+                    "error": "ITEM AMOUNT NOT GIVEN",
+                    "total": totalNutrition
+                });
             } else {
                 GroceryItem.find({"itemID": req.body.newItem_ID}, function(err, grocery_items) {
                     if (grocery_items.length === 0) {
-                        res.render("recipes-add", {"ingredients": ingredients, "error": "NO ITEM FOUND WITH GIVEN ID"});
+                        res.render("recipes-add", {
+                            "ingredients": ingredients,
+                            "error": "NO ITEM FOUND WITH GIVEN ID",
+                            "total": totalNutrition
+                        });
                     } else {
                         let grocery_item = grocery_items[0];
                         grocery_item = modifyQuery.getScaledNutrition(grocery_item, req.body.newItem_weight);
                         ingredients.push(grocery_item);
-                        res.render("recipes-add", {"ingredients": ingredients});
+
+                        totalNutrition.weight += +grocery_item.weight;
+                        totalNutrition.price += +grocery_item.price;
+                        totalNutrition.cals += +grocery_item.cals;
+                        totalNutrition.carbs += +grocery_item.carbs;
+                        totalNutrition.fat += +grocery_item.fat;
+                        totalNutrition.protein += +grocery_item.protein;
+
+                        res.render("recipes-add", {
+                            "ingredients": ingredients,
+                            "total": totalNutrition
+                        });
                     }
                 });
             }
