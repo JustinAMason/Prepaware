@@ -121,6 +121,9 @@ a .content_box {
 #item_listing .item_fact {
   margin: 10px 0px; }
 
+.recipe_add_section {
+  margin: 20px 0; }
+
 #content_creation {
   text-align: center;
   font-family: "Carter One", sans-serif; }

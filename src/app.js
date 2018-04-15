@@ -93,6 +93,7 @@ app.get('/create/item', (req, res) => {
 
 // Create a Recipe (receive form)
 app.post('/create/recipe', (req, res) => {
+    console.log(req.body);
     res.redirect("/");
 });
 
@@ -118,7 +119,6 @@ app.post('/create/item', (req, res) => {
         }).save(function(err, newItem) {
             if (err) {
                 res.redirect("/create/failure");
-                console.log(err);
             } else {
                 res.redirect("/create/success");
             }

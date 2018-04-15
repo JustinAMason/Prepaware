@@ -1,0 +1,42 @@
+{{#if error}}
+    <h3>{{error}}</h3>
+{{/if}}
+
+<form id="recipe_create" method="POST" action="">
+
+    <div class="recipe_add_section">
+        <h3>Submit Recipe to Community:</h3>
+        <input type="submit" name="action" value="Submit Recipe">
+    </div>
+
+    <div class="recipe_add_section">
+        <h3>Add Ingredient to Recipe:</h3>
+        <label for="itemID">ID: </label>
+        <input type="text" id="itemID" name="itemID" value="" style="width: 50px">
+        <br>
+        <label for="weight">Amount: </label>
+        <input type="text" id="weight" name="weight" value="" style="width: 50px">
+        <br>
+        <input type="submit" name="action" value="Add Ingredient">
+    </div>
+
+</form>
+
+<h3>Current Recipe:</h3>
+
+<table class="catalogue">
+    <thead>
+    <tr>
+        <td class="product_fact">Item</td>
+        <td class="nutrition_fact">Amount</td>
+        <td class="nutrition_fact">Price</td>
+        <td class="nutrition_fact">Cals</td>
+        <td class="nutrition_fact">Carbs</td>
+        <td class="nutrition_fact">Fat</td>
+        <td class="nutrition_fact">Protein</td>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
