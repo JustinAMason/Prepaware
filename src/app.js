@@ -93,8 +93,33 @@ app.get('/create/item', (req, res) => {
 
 // Create a Recipe (receive form)
 app.post('/create/recipe', (req, res) => {
+
     console.log(req.body);
-    res.redirect("/");
+    console.log(req.body.price);
+
+    // RECIPE SUBMISSION
+    if (req.body.add === "recipe") {
+
+    // INGREDIENT ADDITION TO RECIPE
+    } else if (req.body.add === "ingredient") {
+        if (req.body.itemID === "" && req.body.weight === "") {
+            res.render("recipes-add", {"error": "INGREDIENT INFORMATION NOT GIVEN"});
+        } else if (req.body.itemID === "") {
+            res.render("recipes-add", {"error": "ITEM ID NOT GIVEN"});
+        } else if (req.body.weight === "") {
+            res.render("recipes-add", {"error": "ITEM AMOUNT NOT GIVEN"});
+        } else {
+            GroceryItem.find({"itemID": req.body.newItem_ID}, function(err, grocery_items) {
+                if (grocery_items.length === 0) {
+                    res.render("recipes-add", {"error": "NO ITEM FOUND WITH GIVEN ID"});
+                } else {
+                    res.render("recipes-add", {"ingredients": grocery_items});
+                }
+            });
+        }
+    }
+
+    //res.redirect("/");
 });
 
 // Create a Grocery Item (receive form)
