@@ -160,3 +160,4 @@ Miscellaneous
 1. ["Unable to set default directory for views"](https://github.com/ericf/express-handlebars/issues/147)
 2. [Provided code used as model for initial directory structure and initial app.js](https://github.com/nyu-csci-ua-0480-008-spring-2018/jjv222-homework06/tree/master/src)
 3. [Carter One Font (via Google Fonts)](https://fonts.google.com/?category=Display&selection.family=Carter+One)
+4. ["Disabled form inputs do not appear in the request" (StackOverflow)](https://stackoverflow.com/questions/7357256/disabled-form-inputs-do-not-appear-in-the-request)
