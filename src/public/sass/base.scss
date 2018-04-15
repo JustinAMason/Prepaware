@@ -83,6 +83,15 @@ body {
 
 }
 
+#error {
+  width: $max_width;
+  min-width: $min-width;
+  margin: $center;
+
+  background-color: rgba(255,0,0,.4);
+  text-align: center;
+}
+
 #page_content {
   margin: 70px $center 0px $center;
   width: $default-width;

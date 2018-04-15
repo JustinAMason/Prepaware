@@ -185,6 +185,12 @@ app.post('/create/recipe', (req, res) => {
 
             if (ingredients.length === 0) {
                 res.redirect("/create/failure");
+            } else if (req.body.recipe_name === "") {
+                res.render("recipes-add", {
+                    "ingredients": ingredients,
+                    "error": "RECIPE NAME NOT GIVEN",
+                    "total": totalNutrition
+                });
             } else {
 
                 new Recipe({
