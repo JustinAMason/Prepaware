@@ -40,7 +40,7 @@ app.get('/recipes', (req, res) => {
 
         const numRecipes = recipes.reduce(function(numRecipes) {
             return(numRecipes + 1);
-        },0);
+        }, 0);
 
         if (recipes.length !== 0) {
 
@@ -73,7 +73,7 @@ app.get('/items', (req, res) => {
 
         const numItems = groceryItems.reduce(function(numItems) {
             return(numItems + 1);
-        },0);
+        }, 0);
 
         if (groceryItems.length !== 0) {
 
