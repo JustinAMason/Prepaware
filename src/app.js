@@ -38,12 +38,17 @@ app.get('/recipes', (req, res) => {
             recipes = readData.filterDocuments(recipes, key, req.query[key]);
         });
 
+        const numRecipes = recipes.reduce(function(numRecipes, recipe) {
+            return(numRecipes + 1);
+        },0);
+
         if (recipes.length !== 0) {
 
             recipes = readData.getPerServingNutrition(recipes);
 
             res.render("recipes-view.hbs", {
-                "recipes": recipes
+                "recipes": recipes,
+                "numRecipes": numRecipes
             });
 
         } else {
@@ -55,9 +60,6 @@ app.get('/recipes', (req, res) => {
 
     });
 
-
-    /*res.render("recipes-view.hbs", {
-    });*/
 });
 
 // View Grocery Items

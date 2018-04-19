@@ -20,6 +20,4 @@ gulp.task("watch", function() {
     gulp.watch('**/*.js', ['lint']);
 });
 
-
-
 gulp.task("default", ["watch"]);
