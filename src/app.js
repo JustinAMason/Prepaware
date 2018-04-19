@@ -71,12 +71,17 @@ app.get('/items', (req, res) => {
             groceryItems = readData.filterDocuments(groceryItems, key, req.query[key]);
         });
 
+        const numItems = groceryItems.reduce(function(numItems, recipe) {
+            return(numItems + 1);
+        },0);
+
         if (groceryItems.length !== 0) {
 
             groceryItems = readData.getPerServingNutrition(groceryItems);
 
             res.render("items-view.hbs", {
-                "grocery_items": groceryItems
+                "grocery_items": groceryItems,
+                "numItems": numItems
             });
         } else {
             res.render("items-view.hbs", {
