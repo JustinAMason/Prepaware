@@ -17,6 +17,9 @@ gulp.task('lint', () => {
 
 gulp.task("watch", function() {
     gulp.watch('./src/public/sass/*.scss', ['sass']);
+    gulp.watch('**/*.js', ['lint']);
 });
+
+
 
 gulp.task("default", ["watch"]);
