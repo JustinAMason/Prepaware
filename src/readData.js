@@ -42,4 +42,4 @@ module.exports = {
     filterDocuments: filterDocuments,
     getPerServingNutrition: getPerServingNutrition,
     getScaledNutrition: getScaledNutrition
-}
+};

@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const db = require('./db');
+require('./db');
 
 const readData = require("./readData");
 
@@ -63,22 +63,22 @@ app.get('/recipes', (req, res) => {
 // View Grocery Items
 app.get('/items', (req, res) => {
 
-    GroceryItem.find({}, function(err, grocery_items) {
+    GroceryItem.find({}, function(err, groceryItems) {
 
         Object.keys(req.query).forEach(function(key) {
-            grocery_items = readData.filterDocuments(grocery_items, key, req.query[key]);
+            groceryItems = readData.filterDocuments(groceryItems, key, req.query[key]);
         });
 
-        if (grocery_items.length !== 0) {
+        if (groceryItems.length !== 0) {
 
-            grocery_items = readData.getPerServingNutrition(grocery_items);
+            groceryItems = readData.getPerServingNutrition(groceryItems);
 
             res.render("items-view.hbs", {
-                "grocery_items": grocery_items
+                "grocery_items": groceryItems
             });
         } else {
             res.render("items-view.hbs", {
-                "grocery_items": grocery_items,
+                "grocery_items": groceryItems,
                 "message": "Sorry, no grocery item meeting those specifications currently exists."
             });
         }
@@ -100,9 +100,9 @@ app.get('/recipes/:slug', (req, res) => {
 
 // View Specific Grocery Item
 app.get('/items/:slug', (req, res) => {
-    GroceryItem.find({"slug": req.params.slug}, function(err, grocery_item) {
-        grocery_item = readData.getPerServingNutrition(grocery_item);
-        res.render("item-view.hbs", {"grocery_item": grocery_item[0]});
+    GroceryItem.find({"slug": req.params.slug}, function(err, groceryItem) {
+        groceryItem = readData.getPerServingNutrition(groceryItem);
+        res.render("item-view.hbs", {"grocery_item": groceryItem[0]});
 
     });
 });
@@ -202,7 +202,7 @@ app.post('/create/recipe', (req, res) => {
                     carbs: totalNutrition.carbs,
                     fat: totalNutrition.fat,
                     protein: totalNutrition.protein
-                }).save(function(err, newItem) {
+                }).save(function(err) {
                     if (err) {
                         res.redirect("/create/failure");
                     } else {
@@ -235,24 +235,24 @@ app.post('/create/recipe', (req, res) => {
                     "total": totalNutrition
                 });
             } else {
-                GroceryItem.find({"itemID": req.body.newItem_ID}, function(err, grocery_items) {
-                    if (grocery_items.length === 0) {
+                GroceryItem.find({"itemID": req.body.newItem_ID}, function(err, groceryItems) {
+                    if (groceryItems.length === 0) {
                         res.render("recipes-add", {
                             "ingredients": ingredients,
                             "error": "NO ITEM FOUND WITH GIVEN ID",
                             "total": totalNutrition
                         });
                     } else {
-                        let grocery_item = grocery_items[0];
-                        grocery_item = readData.getScaledNutrition(grocery_item, req.body.newItem_weight);
-                        ingredients.push(grocery_item);
+                        let groceryItem = groceryItems[0];
+                        groceryItem = readData.getScaledNutrition(groceryItem, req.body.newItem_weight);
+                        ingredients.push(groceryItem);
 
-                        totalNutrition.weight += +grocery_item.weight;
-                        totalNutrition.price += +grocery_item.price;
-                        totalNutrition.cals += +grocery_item.cals;
-                        totalNutrition.carbs += +grocery_item.carbs;
-                        totalNutrition.fat += +grocery_item.fat;
-                        totalNutrition.protein += +grocery_item.protein;
+                        totalNutrition.weight += +groceryItem.weight;
+                        totalNutrition.price += +groceryItem.price;
+                        totalNutrition.cals += +groceryItem.cals;
+                        totalNutrition.carbs += +groceryItem.carbs;
+                        totalNutrition.fat += +groceryItem.fat;
+                        totalNutrition.protein += +groceryItem.protein;
 
                         res.render("recipes-add", {
                             "ingredients": ingredients,
@@ -283,7 +283,7 @@ app.post('/create/item', (req, res) => {
             carbs: +req.body.carbs * +req.body.servings,
             fat: +req.body.fat * +req.body.servings,
             protein: +req.body.protein * +req.body.servings
-        }).save(function(err, newItem) {
+        }).save(function(err) {
             if (err) {
                 res.redirect("/create/failure");
             } else {
