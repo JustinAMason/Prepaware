@@ -38,7 +38,7 @@ app.get('/recipes', (req, res) => {
             recipes = readData.filterDocuments(recipes, key, req.query[key]);
         });
 
-        const numRecipes = recipes.reduce(function(numRecipes, recipe) {
+        const numRecipes = recipes.reduce(function(numRecipes) {
             return(numRecipes + 1);
         },0);
 
@@ -71,7 +71,7 @@ app.get('/items', (req, res) => {
             groceryItems = readData.filterDocuments(groceryItems, key, req.query[key]);
         });
 
-        const numItems = groceryItems.reduce(function(numItems, recipe) {
+        const numItems = groceryItems.reduce(function(numItems) {
             return(numItems + 1);
         },0);
 
@@ -100,7 +100,7 @@ app.get('/recipes/:slug', (req, res) => {
         recipe = readData.getPerServingNutrition(recipe);
         res.render("recipe-view.hbs", {
             "recipe": recipe[0],
-            "serving_price": recipe[0].price / recipe[0].servings
+            "serving_price": (recipe[0].price / recipe[0].servings).toPrecision(2)
         });
     });
 });
@@ -158,6 +158,7 @@ app.post('/create/recipe', (req, res) => {
                 "name": req.body.name.trim(),
                 "weight": req.body.weight,
                 "price": req.body.price,
+                "displayPrice": ("" + req.body.price),
                 "cals": req.body.cals,
                 "carbs": req.body.carbs,
                 "fat": req.body.fat,
@@ -284,6 +285,7 @@ app.post('/create/item', (req, res) => {
             brand: req.body.brand,
             name: req.body.name.trim(),
             price: +req.body.price,
+            displayPrice: ("" + req.body.price),
             servings: +req.body.servings,
             weight: +req.body.weight * +req.body.servings,
             cals: +req.body.calories * +req.body.servings,

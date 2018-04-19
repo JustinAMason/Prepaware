@@ -11,7 +11,8 @@ function filterDocuments(documents, key, value) {
 
 function getPerServingNutrition(documents) {
     documents.forEach(function(document) {
-        document.price = (document.price / document.servings).toFixed(2);
+        document.price = (document.price / document.servings);
+        document.displayPrice = document.price.toPrecision(2);
         document.weight /= document.servings;
         document.cals /= document.servings;
         document.carbs /= document.servings;

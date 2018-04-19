@@ -33,6 +33,7 @@ const RecipeSchema = new mongoose.Schema({
     servings: Number, //# of individual servings yielded by the recipe
     ingredients: [], // Array of embedded grocery items
     price: Number,
+    displayPrice: String,
     cals: Number,
     carbs: Number, // Measured in grams
     fat: Number, // Measured in grams
@@ -45,6 +46,7 @@ const ItemSchema = new mongoose.Schema({
     brand: String,
     name: String,
     price: Number,
+    displayPrice: String,
     servings: Number,
     weight: Number, // Total weight for grocery item (NOT just one serving)
     cals: Number, // (NOT just one serving)
