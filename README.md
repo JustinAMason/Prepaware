@@ -101,37 +101,38 @@ An example recipe with (partially) embedded grocery items:
 
 * (3 points) Gulp
 	* Gulp is "an open-source JavaScript toolkit by Fractal Innovations" (wikipedia).
-	* The use of a toolkit will be beneficial towards the efficient creation of the web application.
+	* The use of a toolkit proved beneficial towards the efficient creation of the web application.
 	* (Point value specified by rubric)
 
 * (2 points) ESLint
 	* ESLint is a "pluggable linting utility for JavaScript" (eslint.org).
-	* The use of ESLint will aid in development by helping maintain consistency in clear and concise code, which becomes more critical as the web applications increases in scale.
-	* A gulp-eslint plugin exists and is expected to be used.
+	* The use of ESLint assisted in development by helping maintain consistency in clear and concise code, more critical as the web application increases in scale.
+	* The gulp-eslint plugin was used.
 	* (Point value specified by rubric)
+	* [Screen Capture of Use (YouTube)](https://www.youtube.com/watch?v=PL7CMiGzqzA)
 
 * (2 points) Sass
 	* Sass is "the most mature, stable, and powerful professional grade CSS extension language in the world" (sass-lang.com).
-	* The use of Sass will aid in the styling of the webpages of Prepaware, as intuitive topics such as variable usage and nesting become available in creating stylesheets.
-	* A gulp-sass plugin exists and is expected to be used.
+	* The use of Sass aided in the styling of the webpages of Prepaware, as intuitive topics such as variable usage and nesting became available in creating stylesheets.
+	* The gulp-sass plugin was used.
 	* (Point value specified by rubric)
+	* [Screen Capture of Use (YouTube)](https://www.youtube.com/watch?v=tDL3xak1euQ)
 
 * (1 point) Web Fonts via Sass (NEW)
-	* Google Web Fonts provides a large number of fonts available for use to anyone with the desire to use them.
-	* Sass provides an opportunity for the efficient importing of desired web fonts.
-	* A sass-web-fonts module exists (via NPM) and has been used.
-	* This module appears to be very straightforward and simple to apply
+	* Google Web Fonts provide a large number of fonts available for use to anyone with the desire to use them.
+	* Sass provided an opportunity for the efficient importing of desired web fonts.
+	* A sass-web-fonts module (via NPM) was used.
+	* This module proved to be very straightforward and simple to apply.
 
 * (1 point) Auto-Incrementing
 	* Auto-incrementing is a concept that would ensure a unique identifier for every document in a collection (note: ObjectID already does that, but potentially asking the user to remember/re-type such a long string may not be feasible).
-	* Auto-incrementing would allow for the formation of a unique ID for every grocery item in the database, and can provide a solution for easy ingredient insertion when a user is creating a recipe.
-	* A mongoose-auto-increment plugin exists and is expected to be used.
-	* This module appears to be very straightforward and simple to apply; however, this will be a critical component of recipe creation and is thus vital to the project.
-
+	* Auto-incrementing alloedw for the formation of a unique ID for every grocery item in the database, and provided a solution for easy ingredient insertion when a user creates a recipe.
+	* A mongoose-auto-increment plugin was used.
+	* This module was straightforward and simple to apply; however, it was be a critical component of recipe creation and is thus vital to the project.
 
 9 points total out of 8 required points
 
-## [Link to Initial Main Project File](src/app.js) 
+## [Link to Main Project File](src/app.js) 
 
 ## Annotations / References Used
 
