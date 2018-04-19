@@ -1,9 +1,6 @@
 // This ESLint configuration was taken from homework assignment #1
 
 module.exports = {
-    "plugins": [
-        "mocha", 
-    ],
     "env": {
         "browser": true,
         "es6": true,
