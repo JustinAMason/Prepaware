@@ -53,7 +53,6 @@ const ItemSchema = new mongoose.Schema({
     carbs: Number, // Measured in grams (NOT just one serving)
     fat: Number, // Measured in grams (NOT just one serving)
     protein: Number // Measured in grams (NOT just one serving)
-
 });
 
 // Use plugins (for slug)

@@ -8,42 +8,47 @@ Prepaware  is a web application that will allow users to add ingredients and the
 
 ## Data Model
 
-The application will store grocery Items and Recipes.
+The application stores grocery items and recipes.
 
-* Every recipe can contain multiple items (embedded; slightly modified)
+* Every recipe contains at least one item (partially embedded; modified)
 
-An example grocery Item:
+An example grocery item:
 
 ```javascript
 {
-	category: “canned/jarred goods”,
-	brand: “Trader Joe’s”,
-	name: “Carolina BBQ Sauce”,
-	weight: 510, //g or mL
-	price: 2.69
-	cals: 900,
-	carbs: 210,
-	fat: 0,
-	protein: 0
+    category: "dairy",
+    brand: "Trader Joe's",
+    name: "Sliced Sharp Cheddar Cheese",
+    slug: "sliced-sharp-cheddar-cheese", // used to create unique URL for individual recipe page
+    price: 3.99,
+    displayPrice: "3.99", // Useful for ensuring two significant figures (ex. 3.5 vs 3.50)
+    servings: 12,
+    weight: 336, // Total weight for grocery item (NOT just one serving)
+    cals: 1320, // (NOT just one serving)
+    carbs: 0, // Measured in grams (NOT just one serving)
+    fat: 108, // Measured in grams (NOT just one serving)
+    protein: 84, // Measured in grams (NOT just one serving)
 }
-
 ```
 
-An example Recipe with embedded grocery Items:
+An example recipe with (partially) embedded grocery items:
 
 ```javascript
 {
-	name: “Jerk Chicken”,
-	servings: 4,
-	ingredients: [
-		{ category: “meat”, brand: “Trader Joe’s”, name: “boneless skinless chicken breast”, weight: 908, price: 5.58, cals: 880, carbs: 0, fat: 0, protein: 176},
-		{ category: “canned/jarred goods”,  brand: “Grace’s”, name: “hot jerk marinade”, weight: 60, price: 1.32, cals: 0, carbs: 0, fat: 0, protein: 0}
-	]
-	price: 6.90,
-	cals: 880,
-	carbs: 0,
-	fat: 0,
-	protein: 176
+    name: "Macaroni & Cheese",
+    "slug":"macaroni-cheese",
+    servings: 1, //# of individual servings yielded by the recipe
+    ingredients: [
+        { "slug":"alfredo-sauce", "protein":"2", "fat":"7", "carbs":"3", "cals":"80", "price":"0.41125", "weight":"62", "name":"Trader Joe's Alfredo Sauce" },
+        { "slug":"macaroni-pasta", "protein":"7", "fat":"1", "carbs":"44", "cals":"210", "price":"0.12375", "weight":"56", "name":"Trader Joe's Macaroni Pasta" },
+        { "slug":"sliced-sharp-cheddar-cheese", "protein":"7", "fat":"9", "carbs":"0", "cals":"110", "price":"0.3325", "weight":"28", "name":"Trader Joe's Sliced Sharp Cheddar Cheese"}
+    ],
+    price: 0.8675,
+    displayPrice: "0.87",
+    cals: 400,
+    carbs: 47, // Measured in grams
+    fat: 17, // Measured in grams
+    protein: 16 // Measured in grams
 }
 
 ```
@@ -116,8 +121,6 @@ An example Recipe with embedded grocery Items:
 	* Sass provides an opportunity for the efficient importing of desired web fonts.
 	* A sass-web-fonts module exists (via NPM) and has been used.
 	* This module appears to be very straightforward and simple to apply
-
-"allow easy, efficient usage of Google Web Fonts.
 
 * (1 point) Auto-Incrementing
 	* Auto-incrementing is a concept that would ensure a unique identifier for every document in a collection (note: ObjectID already does that, but potentially asking the user to remember/re-type such a long string may not be feasible).
