@@ -53,7 +53,7 @@ An example recipe with (partially) embedded grocery items:
 
 ```
 
-## [Link to Commented First Draft Schema](src/db.js) 
+## [Link to Schemas](src/db.js) 
 
 ## Wireframes
 
