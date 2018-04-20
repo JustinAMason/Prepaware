@@ -117,8 +117,12 @@ app.get('/recipes/:slug', (req, res) => {
 // View Specific Grocery Item
 app.get('/items/:slug', (req, res) => {
     GroceryItem.find({"slug": req.params.slug}, function(err, groceryItem) {
+        const totalPrice = groceryItem[0].price;
         groceryItem = readData.getPerServingNutrition(groceryItem);
-        res.render("item-view.hbs", {"grocery_item": groceryItem[0]});
+        res.render("item-view.hbs", {
+            "grocery_item": groceryItem[0],
+            "total_price": totalPrice.toFixed(2)
+        });
 
     });
 });

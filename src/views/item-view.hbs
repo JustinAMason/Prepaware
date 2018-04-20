@@ -20,6 +20,21 @@
     </div>
 
     <div class="item_fact">
+        <h3>Total Price:</h3>
+        <h4>${{total_price}}</h4>
+    </div>
+
+    <div class="item_fact">
+        <h3># Servings:</h3>
+        <h4>{{grocery_item.servings}}</h4>
+    </div>
+
+    <div class="item_fact">
+        <h3>Serving Size:</h3>
+        <h4>{{grocery_item.weight}} g / mL</h4>
+    </div>
+
+    <div class="item_fact">
         <h3>About this Item:</h3>
         <ul>
             <li><h4>One serving of {{grocery_item.brand}} {{grocery_item.name}} costs around ${{grocery_item.displayPrice}}.</h4></li>
