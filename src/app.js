@@ -99,6 +99,14 @@ app.get('/recipes/:slug', (req, res) => {
     Recipe.find({"slug": req.params.slug}, function(err, recipe) {
         const totalPrice = recipe[0].price;
         recipe = readData.getPerServingNutrition(recipe);
+
+        recipe[0].ingredients.forEach(function(ingredient) {
+            ingredient.cals = Math.round(ingredient.cals);
+            ingredient.carbs = Math.round(ingredient.carbs);
+            ingredient.fat = Math.round(ingredient.fat);
+            ingredient.protein = Math.round(ingredient.protein);
+        });
+
         res.render("recipe-view.hbs", {
             "recipe": recipe[0],
             "total_price": totalPrice.toFixed(2),
