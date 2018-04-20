@@ -9,10 +9,10 @@ function filterDocuments(documents, key, value) {
     }
 }
 
-function getPerServingNutrition(documents) {
+function getPerServingNutrition(documents, type) {
     documents.forEach(function(document) {
         document.price = (document.price / document.servings);
-        document.displayPrice = document.price.toPrecision(2);
+        document.displayPrice = document.price.toFixed(2);
         document.weight = Math.round(document.weight / document.servings);
         document.cals = Math.round(document.cals / document.servings);
         document.carbs = Math.round(document.carbs / document.servings);
@@ -28,12 +28,12 @@ function getScaledNutrition(document, amount) {
 
     const scale = amount / document.weight;
 
-    document.weight = amount;
-    document.price *= scale;
-    document.cals *= scale;
-    document.carbs *= scale;
-    document.fat *= scale;
-    document.protein *= scale;
+    document.weight = Math.round(amount);
+    document.price = (document.price * scale).toFixed(2);
+    document.cals = Math.round(document.cals * scale);
+    document.carbs = Math.round(document.carbs * scale);
+    document.fat = Math.round(document.fat * scale);
+    document.protein = Math.round(document.protein * scale);
 
     return(document);
 

@@ -11,7 +11,7 @@
 
     <div class="item_fact">
         <h3>Total Price:</h3>
-        <h4>${{totalPrice}}</h4>
+        <h4>${{total_price}}</h4>
     </div>
 
     <div class="item_fact">
@@ -34,7 +34,7 @@
     <div class="item_fact">
         <h3>About this Recipe:</h3>
         <ul>
-            <li><h4>One serving of {{recipe.name}} costs around ${{serving_price}}.</h4></li>
+            <li><h4>One serving of {{recipe.name}} costs around ${{recipe.displayPrice}}.</h4></li>
             <li><h4>One serving of this recipe contains {{recipe.cals}} calories, {{recipe.carbs}}g of carbs, {{recipe.fat}}g of fat, and {{recipe.protein}}g of protein.</h4></li>
         </ul>
     </div>

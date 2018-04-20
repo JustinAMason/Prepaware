@@ -97,12 +97,11 @@ app.get('/items', (req, res) => {
 // View Specific Recipe
 app.get('/recipes/:slug', (req, res) => {
     Recipe.find({"slug": req.params.slug}, function(err, recipe) {
-        const totalPrice = recipe.price;
+        const totalPrice = recipe[0].price;
         recipe = readData.getPerServingNutrition(recipe);
         res.render("recipe-view.hbs", {
             "recipe": recipe[0],
-            "serving_price": (recipe[0].price / recipe[0].servings).toPrecision(2),
-            "totalPrice": totalPrice
+            "total_price": totalPrice.toFixed(2),
         });
     });
 });
