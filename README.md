@@ -55,35 +55,41 @@ An example recipe with (partially) embedded grocery items:
 
 ## [Link to Schemas](src/db.js) 
 
-## Wireframes
+## Webpage Screenshots
+
+## [Link to Initial Wireframes](documentation/wireframes)
 
 / - the homepage for Prepaware
 
-![home](documentation/wireframes/home.png)
+![home](documentation/webpages/home.png)
 
-/[recipes/items] - page for displaying currently existing recipes/grocery items
+/recipes - page for displaying currently existing recipes
 
-![recipes_items](documentation/wireframes/view.png)
+![recipes](documentation/webpages/recipes)
+
+/items - page for displaying currently existing grocery items
+
+![items](documentation/webpages/items.png)
 
 /create - page for providing the user with an option to create a recipe or add an ingredient
 
-![create](documentation/wireframes/create.png)
+![create](documentation/webpages/create.png)
 
 /create/recipe - page for providing the user with a form to create and submit a recipe
 
-![create_recipe](documentation/wireframes/create_recipe.png)
+![create_recipe](documentation/webpages/create_recipe.png)
 
 /create/item - page for providing the user with a form to create and submit a grocery item/ingredient
 
-![create_item](documentation/wireframes/create_grocery_item.png)
+![create_item](documentation/webpages/create_item.png)
 
 /create/success - page for notifying the user that the submitted recipe/item has been accepted and added
 
-![confirmation](documentation/wireframes/confirmation.png)
+![confirmation](documentation/webpages/create_success.png)
 
 /create/failure - page for notifying the user that the submitted recipe/item has been rejected
 
-![failure](documentation/wireframes/failure.png)
+![failure](documentation/webpages/create_failure.png)
 
 ## Site map
 
