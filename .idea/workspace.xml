@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="67e763ad-8900-40a2-bde9-73a84817f765" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/readData.js" afterPath="$PROJECT_DIR$/src/readData.js" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
+      <change beforePath="$PROJECT_DIR$/src/views/recipe-view.hbs" afterPath="$PROJECT_DIR$/src/views/recipe-view.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,32 +21,31 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            <state relative-caret-position="284">
+              <caret line="104" column="36" lean-forward="true" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
               <folding>
                 <element signature="e#521#612#0" expanded="false" />
                 <element signature="e#656#697#0" expanded="false" />
                 <element signature="e#751#1539#0" expanded="false" />
                 <element signature="e#1597#2431#0" expanded="false" />
-                <element signature="e#2499#2803#0" expanded="false" />
-                <element signature="e#2875#3103#0" expanded="false" />
-                <element signature="e#3150#3227#0" expanded="false" />
-                <element signature="e#3302#3340#0" expanded="false" />
-                <element signature="e#3419#3456#0" expanded="false" />
-                <element signature="e#3535#9051#0" expanded="false" />
-                <element signature="e#9134#10252#0" expanded="false" />
-                <element signature="e#10317#10488#0" expanded="false" />
-                <element signature="e#10553#10789#0" expanded="false" />
+                <element signature="e#2954#3182#0" expanded="false" />
+                <element signature="e#3229#3306#0" expanded="false" />
+                <element signature="e#3381#3419#0" expanded="false" />
+                <element signature="e#3498#3535#0" expanded="false" />
+                <element signature="e#3614#9130#0" expanded="false" />
+                <element signature="e#9213#10331#0" expanded="false" />
+                <element signature="e#10396#10567#0" expanded="false" />
+                <element signature="e#10632#10868#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe-view.hbs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recipe-view.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/recipe-view.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="195">
+              <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readData.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readData.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/readData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="62" lean-forward="true" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+            <state relative-caret-position="146">
+              <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -223,10 +223,10 @@
         <option value="$PROJECT_DIR$/src/views/recipes-view.hbs" />
         <option value="$PROJECT_DIR$/src/views/items-view.hbs" />
         <option value="$PROJECT_DIR$/src/views/item-view.hbs" />
-        <option value="$PROJECT_DIR$/src/views/recipe-view.hbs" />
-        <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/src/db.js" />
         <option value="$PROJECT_DIR$/src/readData.js" />
+        <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/views/recipe-view.hbs" />
       </list>
     </option>
   </component>
@@ -394,12 +394,12 @@
       <workItem from="1524160537021" duration="3707000" />
       <workItem from="1524164677931" duration="6741000" />
       <workItem from="1524177500367" duration="510000" />
-      <workItem from="1524185457686" duration="222000" />
+      <workItem from="1524185457686" duration="572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78325000" />
+    <option name="totallyTimeSpent" value="78675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="6" />
@@ -409,7 +409,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31738436" sideWeight="0.50277996" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32854864" sideWeight="0.49722" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32854864" sideWeight="0.49722" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33652312" sideWeight="0.4940429" order="9" side_tool="false" content_ui="tabs" />
@@ -446,15 +446,14 @@
             <element signature="e#656#697#0" expanded="false" />
             <element signature="e#751#1539#0" expanded="false" />
             <element signature="e#1597#2431#0" expanded="false" />
-            <element signature="e#2499#2803#0" expanded="false" />
-            <element signature="e#2875#3103#0" expanded="false" />
-            <element signature="e#3150#3227#0" expanded="false" />
-            <element signature="e#3302#3340#0" expanded="false" />
-            <element signature="e#3419#3456#0" expanded="false" />
-            <element signature="e#3535#9051#0" expanded="false" />
-            <element signature="e#9134#10252#0" expanded="false" />
-            <element signature="e#10317#10488#0" expanded="false" />
-            <element signature="e#10553#10789#0" expanded="false" />
+            <element signature="e#2954#3182#0" expanded="false" />
+            <element signature="e#3229#3306#0" expanded="false" />
+            <element signature="e#3381#3419#0" expanded="false" />
+            <element signature="e#3498#3535#0" expanded="false" />
+            <element signature="e#3614#9130#0" expanded="false" />
+            <element signature="e#9213#10331#0" expanded="false" />
+            <element signature="e#10396#10567#0" expanded="false" />
+            <element signature="e#10632#10868#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -720,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/recipe-view.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -744,32 +735,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/readData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        <state relative-caret-position="284">
+          <caret line="104" column="36" lean-forward="true" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
           <folding>
             <element signature="e#521#612#0" expanded="false" />
             <element signature="e#656#697#0" expanded="false" />
             <element signature="e#751#1539#0" expanded="false" />
             <element signature="e#1597#2431#0" expanded="false" />
-            <element signature="e#2499#2803#0" expanded="false" />
-            <element signature="e#2875#3103#0" expanded="false" />
-            <element signature="e#3150#3227#0" expanded="false" />
-            <element signature="e#3302#3340#0" expanded="false" />
-            <element signature="e#3419#3456#0" expanded="false" />
-            <element signature="e#3535#9051#0" expanded="false" />
-            <element signature="e#9134#10252#0" expanded="false" />
-            <element signature="e#10317#10488#0" expanded="false" />
-            <element signature="e#10553#10789#0" expanded="false" />
+            <element signature="e#2954#3182#0" expanded="false" />
+            <element signature="e#3229#3306#0" expanded="false" />
+            <element signature="e#3381#3419#0" expanded="false" />
+            <element signature="e#3498#3535#0" expanded="false" />
+            <element signature="e#3614#9130#0" expanded="false" />
+            <element signature="e#9213#10331#0" expanded="false" />
+            <element signature="e#10396#10567#0" expanded="false" />
+            <element signature="e#10632#10868#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/readData.js">
+    <entry file="file://$PROJECT_DIR$/src/views/recipe-view.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="62" lean-forward="true" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding />
         </state>
       </provider>
