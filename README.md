@@ -57,7 +57,7 @@ An example recipe with (partially) embedded grocery items:
 
 ## Webpage Screenshots
 
-## [Link to Initial Wireframes](documentation/wireframes)
+# [Link to Initial Wireframes](documentation/wireframes)
 
 / - the homepage for Prepaware
 
