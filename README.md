@@ -65,7 +65,7 @@ An example recipe with (partially) embedded grocery items:
 
 /recipes - page for displaying currently existing recipes
 
-![recipes](documentation/webpages/recipes)
+![recipes](documentation/webpages/recipes.png)
 
 /items - page for displaying currently existing grocery items
 
