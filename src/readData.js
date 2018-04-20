@@ -13,11 +13,11 @@ function getPerServingNutrition(documents) {
     documents.forEach(function(document) {
         document.price = (document.price / document.servings);
         document.displayPrice = document.price.toPrecision(2);
-        document.weight /= document.servings;
-        document.cals /= document.servings;
-        document.carbs /= document.servings;
-        document.fat /= document.servings;
-        document.protein /= document.servings;
+        document.weight = Math.round(document.weight / document.servings);
+        document.cals = Math.round(document.cals / document.servings);
+        document.carbs = Math.round(document.carbs / document.servings);
+        document.fat = Math.round(document.fat / document.servings);
+        document.protein = Math.round(document.protein / document.servings);
     });
 
     return(documents);
